@@ -1,4 +1,4 @@
-import {MyProjects,ProjName,ProjectDetails,MyProjectsList,ProjectItemTech,ProjectItem,} from "./MyProjects.styled";
+import {MyProjects,ProjName,ProjectDetails,ProjectItemTitle ,MyProjectsList,ProjectItemTech,ProjectItem,} from "./MyProjects.styled";
 
 const Projects = () => (
   <MyProjects>
