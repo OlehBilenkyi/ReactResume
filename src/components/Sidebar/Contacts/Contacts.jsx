@@ -6,7 +6,7 @@ import {
   ContactsItem,
 } from "./Contacts.styled";
 
-const Contacts = () => {
+const Contacts = () => (
   <ContactConteiner>
     <ContactsTitel>Contacts</ContactsTitel>
     <ContactsItem>
@@ -39,9 +39,10 @@ const Contacts = () => {
         Oleh Bilenkyi
       </ContactsLinks>
     </ContactsItem>
-    <ContactsItemp>
+    <ContactsItem>
       <ContactsTitle>Phone:</ContactsTitle>
       <ContactsLinks href="tel:+380985745049">+380985745049</ContactsLinks>
-    </ContactsItemp>
-  </ContactConteiner>;
-};
+    </ContactsItem>
+  </ContactConteiner>
+);
+export default Contacts;

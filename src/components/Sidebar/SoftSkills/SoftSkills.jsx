@@ -11,3 +11,4 @@ const SoftSkills = () => (
     </SkillsList>
   </SkillsContainer>
 );
+export default SoftSkills ;

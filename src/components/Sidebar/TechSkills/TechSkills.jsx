@@ -34,3 +34,4 @@ const TechSkills = () => (
     </SkillsList>
   </SkillsContainer>
 );
+export default TechSkills;

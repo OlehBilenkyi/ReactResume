@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { InfoContainer, Profession, Name, TextDescr } from "./MyInfo.styled";
 
 const MyInfo = ({ profession, name, description }) => (

@@ -1,4 +1,12 @@
-import {MyProjects,ProjName,ProjectDetails,ProjectItemTitle ,MyProjectsList,ProjectItemTech,ProjectItem,} from "./MyProjects.styled";
+import {
+  MyProjects,
+  ProjName,
+  ProjectDetails,
+  ProjectItemTitle,
+  MyProjectsList,
+  ProjectItemTech,
+  ProjectItem,
+} from "./MyProjects.styled";
 
 const Projects = () => (
   <MyProjects>
@@ -13,8 +21,12 @@ const Projects = () => (
           <ProjectItem>
             Corporate food ordering platform with AI-powered recommendations
           </ProjectItem>
-          <ProjectItem>Full-cycle order management with real-time analytics</ProjectItem>
-          <ProjectItem>Secure Stripe payments with Google OAuth and reCAPTCHA v3</ProjectItem>
+          <ProjectItem>
+            Full-cycle order management with real-time analytics
+          </ProjectItem>
+          <ProjectItem>
+            Secure Stripe payments with Google OAuth and reCAPTCHA v3
+          </ProjectItem>
           <ProjectItem>
             Enterprise-grade security (CSRF protection, XSS/SQL prevention)
           </ProjectItem>
@@ -30,8 +42,12 @@ const Projects = () => (
             Car rental platform with AI-powered recommendations and real-time
             analytics
           </ProjectItem>
-          <ProjectItem>Full-cycle fleet management system with admin dashboard</ProjectItem>
-          <ProjectItem>Secure Stripe payments with Google OAuth and reCAPTCHA v3</ProjectItem>
+          <ProjectItem>
+            Full-cycle fleet management system with admin dashboard
+          </ProjectItem>
+          <ProjectItem>
+            Secure Stripe payments with Google OAuth and reCAPTCHA v3
+          </ProjectItem>
           <ProjectItem>
             Automated Telegram/email notifications and multi-factor
             authentication
@@ -42,7 +58,9 @@ const Projects = () => (
         <ProjectItemTitle>Tic-Tac-Toe</ProjectItemTitle>
         <ProjectItemTech>[ JavaScript, DOM ]</ProjectItemTech>
         <ProjectDetails>
-          <ProjectItem>Interactive browser game with win detection logic</ProjectItem>
+          <ProjectItem>
+            Interactive browser game with win detection logic
+          </ProjectItem>
           <ProjectItem>Responsive design works on all device sizes</ProjectItem>
         </ProjectDetails>
       </ProjectItem>
@@ -51,7 +69,9 @@ const Projects = () => (
         <ProjectItemTech>[ JavaScript ]</ProjectItemTech>
         <ProjectDetails>
           <ProjectItem>Real-time currency conversion calculator</ProjectItem>
-          <ProjectItem>Fetches latest exchange rates from pubProjectItemc API</ProjectItem>
+          <ProjectItem>
+            Fetches latest exchange rates from pubProjectItemc API
+          </ProjectItem>
         </ProjectDetails>
       </ProjectItem>
       <ProjectItem>
