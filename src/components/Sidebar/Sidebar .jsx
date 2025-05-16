@@ -20,5 +20,5 @@ export const Sidebar = ({ avatar }) => {
 
 Sidebar.propTypes = {
   avatar: PropTypes.string.isRequired,
-  children: PropTypes.node,
+  
 };

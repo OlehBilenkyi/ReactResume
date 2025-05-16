@@ -1,8 +1,17 @@
-import styled from './MyInfo.styled'
+import { InfoContainer, Profession, Name, TextDescr } from "./MyInfo.styled";
 
-const Sidebar = (
-    return(
+const MyInfo = ({ profession, name, description }) => (
+  <InfoContainer>
+    <Profession>{profession}</Profession>
+    <Name>{name}</Name>
+    <TextDescr>{description}</TextDescr>
+  </InfoContainer>
+);
 
-    )
-)
-export default Sidebar
+MyInfo.propTypes = {
+  profession: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string,
+};
+
+export default MyInfo;
