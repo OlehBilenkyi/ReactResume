@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
-import { InfoContainer, Profession, Name, TextDescr } from "./MyInfo.styled";
+import styles from "./MyInfo.module.scss";
 
 const MyInfo = ({ profession, name, description }) => (
-  <InfoContainer>
-    <Profession>{profession}</Profession>
-    <Name>{name}</Name>
-    <TextDescr>{description}</TextDescr>
-  </InfoContainer>
+  <div className={styles.infoContainer}>
+    <h2 className={styles.profession}>{profession}</h2>
+    <h1 className={styles.name}>{name}</h1>
+    <p className={styles.textDescr}>{description}</p>
+  </div>
 );
 
 MyInfo.propTypes = {
