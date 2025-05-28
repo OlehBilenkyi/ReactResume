@@ -8,7 +8,7 @@ import {
   MyProjectsContainerName,
   MyProjectsContainer,
 } from "./WorkExperience.module";
-import MyEducation from "../Education/Education";
+
 
 const Experience = () => (
   <>
@@ -67,7 +67,7 @@ const Experience = () => (
         </WorkExperionseList>
       </WordExperienceContainer>
     </MyProjectsContainer>
-    <MyEducation />
+    
   </>
 );
 

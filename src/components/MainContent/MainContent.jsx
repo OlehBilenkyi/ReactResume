@@ -2,6 +2,7 @@ import MyInfo from "./MyInfo/MyInfo";
 import Projects from "./MyProjects/MyProjects";
 import Experience from "./WorkExperience/WorkExperience";
 import { MainContentWrapper } from "./MainContent.styled";
+import MyEducation from "../MainContent/Education/Education";
 
 const MainContent = ({ profession, name, description }) => (
   <MainContentWrapper>
@@ -9,6 +10,7 @@ const MainContent = ({ profession, name, description }) => (
 
     <Experience />
     <Projects />
+    <MyEducation />
   </MainContentWrapper>
 );
 
