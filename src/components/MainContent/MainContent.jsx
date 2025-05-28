@@ -6,8 +6,9 @@ import { MainContentWrapper } from "./MainContent.styled";
 const MainContent = ({ profession, name, description }) => (
   <MainContentWrapper>
     <MyInfo profession={profession} name={name} description={description} />
-    <Projects />
+
     <Experience />
+    <Projects />
   </MainContentWrapper>
 );
 

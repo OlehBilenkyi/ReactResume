@@ -10,81 +10,64 @@ import {
 
 const Projects = () => (
   <MyProjects>
-    <ProjName>Projects</ProjName>
+    <ProjName>Sample Projects</ProjName>
     <MyProjectsList>
       <ProjectItem>
-        <ProjectItemTitle>FoodCase Catering</ProjectItemTitle>
-        <ProjectItemTech>
-          [ PHP, JavaScript, MySQL, Stripe API, PHPMailer ]
-        </ProjectItemTech>
+        <ProjectItemTitle>Meal Planner Pro</ProjectItemTitle>
+        {/* <ProjectItemTech>Jan 2024 – Present</ProjectItemTech> */}
         <ProjectDetails>
           <ProjectItem>
-            Corporate food ordering platform with AI-powered recommendations
+            Calorie tracker with customizable meals and diet types.
           </ProjectItem>
           <ProjectItem>
-            Full-cycle order management with real-time analytics
-          </ProjectItem>
-          <ProjectItem>
-            Secure Stripe payments with Google OAuth and reCAPTCHA v3
-          </ProjectItem>
-          <ProjectItem>
-            Enterprise-grade security (CSRF protection, XSS/SQL prevention)
+            Tech: React, Hooks, Firebase, Bootstrap, Chart.js
           </ProjectItem>
         </ProjectDetails>
       </ProjectItem>
       <ProjectItem>
-        <ProjectItemTitle>Taxi Rent</ProjectItemTitle>
-        <ProjectItemTech>
-          [ JavaScript, PHP, HTML, CSS, Stripe, MySQL ]
-        </ProjectItemTech>
+        <ProjectItemTitle>RealEstateHub</ProjectItemTitle>
+        {/* <ProjectItemTech>Feb 2023 – Dec 2023</ProjectItemTech> */}
         <ProjectDetails>
           <ProjectItem>
-            Car rental platform with AI-powered recommendations and real-time
-            analytics
+            Property listing platform with filters and mock backend.
           </ProjectItem>
-          <ProjectItem>
-            Full-cycle fleet management system with admin dashboard
-          </ProjectItem>
-          <ProjectItem>
+          <ProjectItem>Tech: React, SCSS, REST API</ProjectItem>
+          {/*<ProjectItem>
             Secure Stripe payments with Google OAuth and reCAPTCHA v3
           </ProjectItem>
           <ProjectItem>
             Automated Telegram/email notifications and multi-factor
             authentication
-          </ProjectItem>
+          </ProjectItem> */}
         </ProjectDetails>
       </ProjectItem>
       <ProjectItem>
-        <ProjectItemTitle>Tic-Tac-Toe</ProjectItemTitle>
-        <ProjectItemTech>[ JavaScript, DOM ]</ProjectItemTech>
+        <ProjectItemTitle>StudyMate</ProjectItemTitle>
+        {/* <ProjectItemTech>Feb 2022 – Mar 2022</ProjectItemTech> */}
         <ProjectDetails>
           <ProjectItem>
-            Interactive browser game with win detection logic
+            Digital learning tracker with task/module management.
           </ProjectItem>
-          <ProjectItem>Responsive design works on all device sizes</ProjectItem>
+          <ProjectItem>Tech: React, MUI, localStorage</ProjectItem>
         </ProjectDetails>
       </ProjectItem>
       <ProjectItem>
-        <ProjectItemTitle>Currency Count</ProjectItemTitle>
-        <ProjectItemTech>[ JavaScript ]</ProjectItemTech>
+        <ProjectItemTitle>CryptoCompare</ProjectItemTitle>
+        {/* <ProjectItemTech>[ JavaScript ]</ProjectItemTech> */}
         <ProjectDetails>
-          <ProjectItem>Real-time currency conversion calculator</ProjectItem>
-          <ProjectItem>
-            Fetches latest exchange rates from pubProjectItemc API
-          </ProjectItem>
+          <ProjectItem>Live crypto rates with interactive charts.</ProjectItem>
+          <ProjectItem>Tech: React, REST API, CSS Modules</ProjectItem>
         </ProjectDetails>
       </ProjectItem>
       <ProjectItem>
-        <ProjectItemTitle>Quote Generator</ProjectItemTitle>
-        <ProjectItemTech>[ JavaScript, API ]</ProjectItemTech>
-      </ProjectItem>
-      <ProjectItem>
-        <ProjectItemTitle>To-Do List</ProjectItemTitle>
-        <ProjectItemTech>[ JavaScript, Local Storage ]</ProjectItemTech>
-      </ProjectItem>
-      <ProjectItem>
-        <ProjectItemTitle>Calorie Calculator</ProjectItemTitle>
-        <ProjectItemTech>[ JavaScript ]</ProjectItemTech>
+        <ProjectItemTitle>Taxi — Smart Car Rental System </ProjectItemTitle>
+        {/* <ProjectItemTech>[ JavaScript ]</ProjectItemTech> */}
+        <ProjectDetails>
+          <ProjectItem>
+            Secure platform with AI recommendations and Stripe payments.
+          </ProjectItem>
+          <ProjectItem>Tech: PHP, JavaScript, MySQL, Docker</ProjectItem>
+        </ProjectDetails>
       </ProjectItem>
     </MyProjectsList>
   </MyProjects>

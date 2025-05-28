@@ -7,9 +7,9 @@ function App() {
     <>
       <Wrapper>
         <MainContent
-          profession="Front-end Developer"
+          profession="Front-End Developer (React, JavaScript)"
           name="Oleh Bilenkyi"
-          description="Motivated and self-taught Junior JavaScript Developer"
+          description="Junior Front-End Developer with hands-on experience in React, JavaScript, and responsive design. Built 5+ applications with Firebase, REST APIs, and modern UI libraries. Passionate about clean code and user-friendly interfaces. Seeking a role to grow in a collaborative team."
         />
         <MySidebar avatar="/avatar.jpg" />
       </Wrapper>
