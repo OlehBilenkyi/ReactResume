@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SidebarWrapper = styled.aside`
-  background: #e0ebfe;
+  background: #313638;
   padding: 40px;
   width: 370px;
   box-sizing: border-box;

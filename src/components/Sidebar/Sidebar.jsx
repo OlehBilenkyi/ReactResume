@@ -1,6 +1,6 @@
 import Contacts from "./Contacts/Contacts";
 import Languages from "./Languages/Languages";
-import SoftSkills from "./SoftSkills/SoftSkills";
+import Summary from "./Summary/Summary";
 import TechSkills from "./TechSkills/TechSkills";
 import { SidebarWrapper, SidebarContent } from "./Sidebar.styled";
 import PropTypes from "prop-types";
@@ -10,8 +10,8 @@ const MySidebar = ({ avatar }) => {
     <SidebarWrapper>
       <img src={avatar} alt="Avatar" width="300" loading="lazy" />
       <SidebarContent>
+        <Summary />
         <TechSkills />
-        <SoftSkills />
         <Languages />
         <Contacts />
       </SidebarContent>

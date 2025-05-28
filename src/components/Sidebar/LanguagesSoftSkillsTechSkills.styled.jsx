@@ -7,17 +7,18 @@ export const SkillsContainer = styled.div`
 export const SkillsTitle = styled.h3`
   font-weight: 700;
   font-size: 22px;
-  color: #161d2a;
+  color:rgb(255, 0, 0);
   margin-bottom: 10px;
 `;
 
-export const SkillsList = styled.ul`
+export const SkillsList = styled.p`
   padding-left: 18px;
+  
 `;
 
-export const SkillsListItem = styled.li`
+export const SkillsListItem = styled.p`
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
-  color: #161d2a;
+  color:rgb(255, 255, 255);
 `;

@@ -6,11 +6,13 @@ const Languages = () => (
       <SkillsTitle>Languages</SkillsTitle>
       <SkillsList>
         <SkillsListItem>Ukrainian - Native</SkillsListItem>
-        <SkillsListItem>Russian - C2</SkillsListItem>
+        <SkillsListItem>Polish: A2 (Basic)</SkillsListItem>
         <SkillsListItem>English - A2</SkillsListItem>
+        <SkillsListItem>Russian - C2</SkillsListItem>
       </SkillsList>
     </SkillsContainer>
 )
+
 
 
 

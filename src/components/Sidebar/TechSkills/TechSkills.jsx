@@ -7,29 +7,25 @@ import {
 
 const TechSkills = () => (
   <SkillsContainer>
-    <SkillsTitle>Technical Skills</SkillsTitle>
+    <SkillsTitle>Tech Stack</SkillsTitle>
     <SkillsList>
       <SkillsListItem>
-        <strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+), React
-        (beginner)
+        <strong>Languages & Libraries:</strong> HTML5, CSS3, JavaScript (ES6+),
+        React (Hooks, Router), Bootstrap, SASS, TypeScript (basic),Redux
       </SkillsListItem>
       <SkillsListItem>
-        <strong>Backend:</strong> PHP, Node.js (beginner)
+        <strong>Tools:</strong> Git, GitHub, Webpack, Vite, Figma, Trello,
+        Chrome DevTools
       </SkillsListItem>
       <SkillsListItem>
-        <strong>Databases:</strong> MySQL
+        <strong>APIs & Backend:</strong> REST API, PHP (basic), MySQL (basic)
       </SkillsListItem>
       <SkillsListItem>
-        <strong>Tools:</strong> Git, Composer, REST API
+        <strong>UI Frameworks:</strong> Material UI (MUI), Bootstrap
       </SkillsListItem>
       <SkillsListItem>
-        <strong>APIs:</strong> Stripe, Google OAuth, PHPMailer
-      </SkillsListItem>
-      <SkillsListItem>
-        <strong>Security:</strong> CSRF Protection, Google reCAPTCHA
-      </SkillsListItem>
-      <SkillsListItem>
-        <strong>Workflow:</strong> Trello, Figma
+        <strong>Soft Skills:</strong> Teamwork, communication, adaptability,
+        self-motivation, time management
       </SkillsListItem>
     </SkillsList>
   </SkillsContainer>
