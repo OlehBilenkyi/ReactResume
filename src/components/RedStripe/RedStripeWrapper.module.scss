@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+}
+
+.redStripe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 35px; // Толщина полосы
+  background-color: #c00;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  margin-left: 35px; // Отступ для полосы
+  z-index: 2;
+}

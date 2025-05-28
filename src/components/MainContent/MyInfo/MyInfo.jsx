@@ -1,18 +1,17 @@
-import PropTypes from "prop-types";
-import styles from "./MyInfo.module.scss";
+import styles from "./RedStripeLayout.module.scss";
 
-const MyInfo = ({ profession, name }) => (
-  <div className={styles.infoContainer}>
-    <h2 className={styles.profession}>{profession}</h2>
-    <h1 className={styles.name}>{name}</h1>
-    
-  </div>
-);
-
-MyInfo.propTypes = {
-  profession: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  
+const MyInfo = ({ name, profession, children }) => {
+  return (
+    <div className={styles.layoutContainer}>
+      <div className={styles.redStripe}>
+        <div className={styles.headerContent}>
+          <h1 className={styles.name}>{name}</h1>
+          <h2 className={styles.profession}>{profession}</h2>
+        </div>
+      </div>
+      <div className={styles.mainContent}>{children}</div>
+    </div>
+  );
 };
 
 export default MyInfo;

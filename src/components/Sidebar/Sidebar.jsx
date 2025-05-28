@@ -2,24 +2,25 @@ import Contacts from "./Contacts/Contacts";
 import Languages from "./Languages/Languages";
 import Summary from "./Summary/Summary";
 import TechSkills from "./TechSkills/TechSkills";
-import { SidebarWrapper, SidebarContent } from "./Sidebar.styled";
 import PropTypes from "prop-types";
+import styles from "./Sidebar.module.scss";
 
 const MySidebar = ({ avatar }) => {
   return (
-    <SidebarWrapper>
-      <img src={avatar} alt="Avatar" width="300" loading="lazy" />
-      <SidebarContent>
+    <aside className={styles.sidebarWrapper}>
+      <img src={avatar} alt="Avatar" className={styles.avatar} loading="lazy" />
+      <div className={styles.sidebarContent}>
         <Summary />
         <TechSkills />
         <Languages />
         <Contacts />
-      </SidebarContent>
-    </SidebarWrapper>
+      </div>
+    </aside>
   );
 };
 
 MySidebar.propTypes = {
-  avatar: PropTypes.string.isRequired, // Теперь PropTypes будет определен
+  avatar: PropTypes.string.isRequired,
 };
+
 export default MySidebar;
