@@ -10,10 +10,10 @@ const MySidebar = ({ avatar }) => {
     <SidebarWrapper>
       <img src={avatar} alt="Avatar" width="300" loading="lazy" />
       <SidebarContent>
-        <Contacts />
         <TechSkills />
         <SoftSkills />
         <Languages />
+        <Contacts />
       </SidebarContent>
     </SidebarWrapper>
   );

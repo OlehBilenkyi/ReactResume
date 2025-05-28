@@ -8,19 +8,11 @@ import {
 
 const Contacts = () => (
   <ContactConteiner>
-    <ContactsTitel>Contacts</ContactsTitel>
-    <ContactsItem>
-      <ContactsTitle>Email:</ContactsTitle>
-      <ContactsLinks href="mailto:13eLuy@gmail.com">
-        I3eLuy@gmail.com
-      </ContactsLinks>
-    </ContactsItem>
-    <ContactsItem>
-      <ContactsTitle>GitHub:</ContactsTitle>
-      <ContactsLinks href="https://github.com/OlehBilenkyi" target="_blank">
-        OlehBilenkyi
-      </ContactsLinks>
-    </ContactsItem>
+    <ContactsTitel>Portfolio & Contacts</ContactsTitel>
+    <ContactsTitle>GitHub:</ContactsTitle>
+    <ContactsLinks href="https://github.com/OlehBilenkyi" target="_blank">
+      OlehBilenkyi
+    </ContactsLinks>
     <ContactsItem>
       <ContactsTitle>LinkedIn:</ContactsTitle>
       <ContactsLinks
@@ -38,6 +30,17 @@ const Contacts = () => (
       >
         Oleh Bilenkyi
       </ContactsLinks>
+    </ContactsItem>
+    <ContactsItem>
+      <ContactsTitle>Email:</ContactsTitle>
+      <ContactsLinks href="mailto:13eLuy@gmail.com">
+        I3eLuy@gmail.com
+      </ContactsLinks>
+    </ContactsItem>
+    <ContactsItem></ContactsItem>
+    <ContactsItem>
+      <ContactsTitle>Telegram:</ContactsTitle>
+      <ContactsLinks href="https://t.me/OJIeja">@OJIeja</ContactsLinks>
     </ContactsItem>
     <ContactsItem>
       <ContactsTitle>Phone:</ContactsTitle>
