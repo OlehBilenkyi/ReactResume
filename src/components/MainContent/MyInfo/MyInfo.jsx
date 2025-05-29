@@ -1,17 +1,14 @@
-import styles from "./RedStripeLayout.module.scss";
+import React from "react"; // Добавьте этот импорт
+import styles from "./MyInfo.module.scss";
 
-const MyInfo = ({ name, profession, children }) => {
+const MyInfo = React.forwardRef(({ name, profession, description }, ref) => {
   return (
-    <div className={styles.layoutContainer}>
-      <div className={styles.redStripe}>
-        <div className={styles.headerContent}>
-          <h1 className={styles.name}>{name}</h1>
-          <h2 className={styles.profession}>{profession}</h2>
-        </div>
-      </div>
-      <div className={styles.mainContent}>{children}</div>
+    <div ref={ref} className={styles.infoContainer}>
+      <h1>{name}</h1>
+      <h2>{profession}</h2>
+      <p>{description}</p>
     </div>
   );
-};
+});
 
 export default MyInfo;

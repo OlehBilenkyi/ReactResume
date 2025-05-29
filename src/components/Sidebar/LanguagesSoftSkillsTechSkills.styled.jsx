@@ -11,7 +11,7 @@ export const SkillsTitle = styled.h3`
   margin-bottom: 10px;
 `;
 
-export const SkillsList = styled.p`
+export const SkillsList = styled.h4`
   padding-left: 18px;
   
 `;

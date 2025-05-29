@@ -15,12 +15,12 @@ const MyEducation = () => {
           Resources: YouTube (GO-IT, Net Ninja), JavaScript.info, freeCodeCamp,
           ChatGPT.
         </EducationDip>
-        <p class="work-experien-time">2022 - Present</p>
-        <ul class="work-experionse-list">
-          <li class="work-experionse-items">
+        <p className="work-experien-time">2022 - Present</p>
+        <ul className="work-experionse-list">
+          <li className="work-experionse-items">
             Focused on HTML, CSS,JavaScript (ES6+), React fundamentals
           </li>
-          <li class="work-experionse-items">
+          <li className="work-experionse-items">
             Completed projects in both frontend development
           </li>
         </ul>
