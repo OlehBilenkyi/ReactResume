@@ -36,7 +36,7 @@ const MyEducation = () => {
           Specialist Diploma (with honors) in Electrical Power Engineering,
           Electrical Mechanics, Electrical Engineering
         </EducationDip>
-        <WorkExperienceTime>September 2016 – June 2018</WorkExperienceTime>
+        <WorkExperienceTime>September 2010 – June 2018</WorkExperienceTime>
       </EducationContainer>
     </>
   );
