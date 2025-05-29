@@ -44,7 +44,8 @@ function App() {
     <Wrapper>
       <RedStripe style={{ top: `${stripeTop}px` }} />
       <MainContent ref={myInfoRef} {...contentProps} />
-      <MySidebar ref={sidebarRef} avatar="/avatar.jpg" />
+      <MySidebar ref={sidebarRef} avatar="/avatar.jpg" />{" "}
+      {/* Путь к аватарке передается корректно */}
     </Wrapper>
   );
 }

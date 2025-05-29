@@ -5,11 +5,12 @@ import Summary from "./Summary/Summary";
 import TechSkills from "./TechSkills/TechSkills";
 import PropTypes from "prop-types";
 import styles from "./Sidebar.module.scss";
+import Avatar from "./Avatar/Avatar";
 
 const MySidebar = React.forwardRef(({ avatar }, ref) => {
   return (
     <aside ref={ref} className={styles.sidebarWrapper}>
-      <img src={avatar} alt="Avatar" className={styles.avatar} loading="lazy" />
+      <Avatar src={avatar} /> {/* Убрали дублирующийся img */}
       <div className={styles.sidebarContent}>
         <Summary />
         <TechSkills />
