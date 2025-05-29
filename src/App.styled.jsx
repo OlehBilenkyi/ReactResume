@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   background: #ffffff;
   display: flex;
+  flex-direction: row-reverse
   flex-direction: row-reverse;
   width: 100%;
   max-width: 1200px;

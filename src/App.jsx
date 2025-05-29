@@ -1,5 +1,5 @@
-import { useRef, useEffect, useState } from "react";
 import MainContent from "./components/MainContent/MainContent";
+import Avatar from "./components/Sidebar/Avatar/Avatar";
 import MySidebar from "./components/Sidebar/Sidebar";
 import styled from "styled-components";
 
@@ -14,38 +14,28 @@ const Wrapper = styled.div`
 
 const RedStripe = styled.div`
   position: absolute;
-  height: 120px; // Изменили с 120px на 2px (толщина линии)
+  height: 130px;
   background-color: #c00;
-  z-index: 2; // Линия между фоном (1) и аватаром (3)
+  z-index: 2;
   left: 0;
   right: 0;
+  top: 40px; /* Фиксированная позиция под заголовком */
 `;
 
 function App() {
-  const myInfoRef = useRef(null);
-  const sidebarRef = useRef(null);
-  const [stripeTop, setStripeTop] = useState(0);
-
   const contentProps = {
-    profession: "Front-End Developer (React, JavaScript)",
-    name: "Oleh Bilenkyi",
+    profession: "FRONT-END DEVELOPER (REACT, JAVASCRIPT)",
+    name: "OLEH BILENKYI",
     description: "Junior Front-End Developer with hands-on experience...",
   };
 
-  useEffect(() => {
-    if (myInfoRef.current && sidebarRef.current) {
-      const myInfoTop = myInfoRef.current.offsetTop;
-      const avatarTop = sidebarRef.current.querySelector("img").offsetTop;
-      setStripeTop(Math.max(myInfoTop, avatarTop) + 10);
-    }
-  }, []);
-
   return (
     <Wrapper>
-      <RedStripe style={{ top: `${stripeTop}px` }} />
-      <MainContent ref={myInfoRef} {...contentProps} />
-      <MySidebar ref={sidebarRef} avatar="/avatar.jpg" />{" "}
-      {/* Путь к аватарке передается корректно */}
+      <Avatar avatar="/avatar.jpg" />
+      <MySidebar />
+
+      <RedStripe />
+      <MainContent {...contentProps} />
     </Wrapper>
   );
 }

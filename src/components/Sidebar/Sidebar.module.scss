@@ -1,42 +1,22 @@
 .sidebarWrapper {
   background: #313638;
-  padding: 40px;
+  padding: 40px 10px 40px 10px;
+
   width: 370px;
   box-sizing: border-box;
   color: #ffffff;
   position: sticky;
   top: 0;
   min-height: 100vh;
-  z-index: 1; // Сайдбар под линией (линия z-index: 2 в App.js)
-
-  // // Стили для аватара
-  // .avatar {
-  //   width: 200px;
-  //   height: 200px;
-  //   border-radius: 50%;
-  //   object-fit: cover;
-  //   display: block;
-  //   margin: 0 auto 30px;
-  //   border: 3px solid #ffffff;
-  //   box-shadow: 0 0 0 2px #313638; // Дополнительная защита
-  //   position: relative;
-  //   z-index: 4; // Аватар над линией
-  //   background: #313638; // Фон для перекрытия линии
-  //   padding: 2px; // Защита от артефактов
-  // }
+  z-index: 1;
 
   // Контент сайдбара
   .sidebarContent {
     padding: 0 20px;
-    height: calc(
-      100% - 270px
-    ); // 270px = 200px аватар + 30px margin + 40px padding
+    margin-top: 203px;
     position: relative;
-    z-index: 2; // Контент над линией, но под аватаром
-
     > * {
       margin-bottom: 30px;
-
       &:last-child {
         margin-bottom: 0;
       }

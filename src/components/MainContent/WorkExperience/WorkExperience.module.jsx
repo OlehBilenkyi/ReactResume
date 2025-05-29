@@ -40,4 +40,5 @@ export const MyProjectsContainerName = styled.h3`
 
 export const MyProjectsContainer = styled.div`
   margin-bottom: 40px;
+  margin-top: 50px;
 `;

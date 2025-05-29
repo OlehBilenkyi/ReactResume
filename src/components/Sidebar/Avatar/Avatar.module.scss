@@ -1,20 +1,44 @@
-.avatarContainer {
-  position: relative;
-  z-index: 4; // Аватар над полосой
-  margin: -60px auto 30px; // Поднимаем аватар над полосой
+.avatarWrapper {
+  position: relative; /* или absolute — смотри ниже */
 }
 
-.avatar {
+.avatarImage {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
-  margin: 0 auto 30px;
+  display: block; /* можно оставить */
+  margin-bottom: 30px;
+  margin-left: 0; /* убираем автоцентрирование */
   border: 3px solid #ffffff;
-  box-shadow: 0 0 0 2px #313638; // Дополнительная защита
-  position: relative;
-  z-index: 4; // Аватар над линией
-  background: #313638; // Фон для перекрытия линии
-  padding: 2px; // Защита от артефактов
+  box-shadow: 0 0 0 2px #313638;
+  position: relative; /* если не надо вылазить — relative */
+  z-index: 4;
+  background: #313638;
+  padding: 2px;
 }
+.avatarImage {
+  position: absolute;
+  top: 12px;
+  left: 72px;
+}
+// .avatarContainer {
+//   position: relative;
+//   z-index: 100; // Аватар над полосой
+//   margin: -30px auto 30px;
+// }
+
+// .avatar {
+//   width: 200px;
+//   height: 200px;
+//   border-radius: 50%;
+//   object-fit: cover;
+//   display: block;
+//   margin: 0 auto 30px;
+//   border: 3px solid #ffffff;
+//   box-shadow: 0 0 0 2px #313638; // Дополнительная защита
+//   position: relative;
+//   z-index: 4; // Аватар над линией
+//   background: #313638; // Фон для перекрытия линии
+//   padding: 2px; // Защита от артефактов
+// }
