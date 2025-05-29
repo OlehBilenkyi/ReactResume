@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainContentWrapper = styled.div`
-  padding: 40px 80px;
+  padding: 40px 18px 80px 30px;
   flex: 1;
   position: relative;
   z-index: 2; // Чтобы контент был поверх красной линии

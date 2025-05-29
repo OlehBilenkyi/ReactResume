@@ -14,12 +14,12 @@ const Wrapper = styled.div`
 
 const RedStripe = styled.div`
   position: absolute;
-  height: 130px;
+  height: 150px;
   background-color: #c00;
   z-index: 2;
   left: 0;
   right: 0;
-  top: 40px; /* Фиксированная позиция под заголовком */
+  top: 34px; /* Фиксированная позиция под заголовком */
 `;
 
 function App() {

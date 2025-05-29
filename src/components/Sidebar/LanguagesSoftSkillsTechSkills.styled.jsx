@@ -22,3 +22,16 @@ export const SkillsListItem = styled.p`
   line-height: 1.7;
   color:rgb(255, 255, 255);
 `;
+  export const ContactsTitle= styled.span`
+    font-weight: 700;
+    font-size: 14px;
+    color: #ffffff;
+    margin-right: 8px;
+  `
+
+  export const ContactsLinks = styled.a `
+    text-decoration: underline;
+    color: #fa9191;
+    font-weight: 700;
+    font-size: 14px;
+  `
