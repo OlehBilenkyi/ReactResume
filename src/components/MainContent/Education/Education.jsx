@@ -29,12 +29,12 @@ const MyEducation = () => {
         <EducationTitle>Education</EducationTitle>
         <NameEducation>
           <a href="https://nuos.edu.ua/" target="_blank">
-            Admiral Makarov National University of Shipbuilding
+            Admiral Makarov National University of Shipbuilding, Mykolaiv,
+            Ukraine
           </a>
         </NameEducation>
         <EducationDip>
-          Specialist Diploma (with honors) in Electrical Power Engineering,
-          Electrical Mechanics, Electrical Engineering
+          Master’s Degree (with Honors), Electrical Engineering
         </EducationDip>
         <WorkExperienceTime>September 2010 – June 2018</WorkExperienceTime>
       </EducationContainer>
