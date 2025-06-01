@@ -1,3 +1,4 @@
+import React from "react";
 import {
   SkillsContainer,
   SkillsTitle,
@@ -5,13 +6,13 @@ import {
   SkillsListItem,
 } from "../LanguagesSoftSkillsTechSkills.styled";
 
-const TechSkills = () => (
+const TechSkills: React.FC = () => (
   <SkillsContainer>
     <SkillsTitle>Tech Stack</SkillsTitle>
     <SkillsList>
       <SkillsListItem>
         <strong>Languages & Libraries:</strong> HTML5, CSS3, JavaScript (ES6+),
-        React (Hooks, Router), Bootstrap, SASS, TypeScript (basic),Redux
+        React (Hooks, Router), Bootstrap, SASS, TypeScript (basic), Redux
       </SkillsListItem>
       <SkillsListItem>
         <strong>Tools:</strong> Git, GitHub, Webpack, Vite, Figma, Trello,
@@ -30,4 +31,5 @@ const TechSkills = () => (
     </SkillsList>
   </SkillsContainer>
 );
+
 export default TechSkills;

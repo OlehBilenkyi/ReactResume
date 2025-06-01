@@ -1,38 +1,76 @@
 .sidebarWrapper {
-  background: #313638;
-  padding: 60px 10px 40px 10px;
-  width: 370px;
-  box-sizing: border-box;
-  color: #ffffff;
-  position: sticky;
-  top: 0;
-  min-height: 100vh;
-  z-index: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(25, 25, 25, 0.9) 0%,
+    rgba(50, 20, 20, 0.9) 100%
+  );
+  padding: 80px 25px 25px;
+  width: 350px;
+  color: var(--primary-white);
+  position: relative;
+  border-right: 2px solid var(--primary-red);
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  background-image: url("https://i.imgur.com/ZYwDk8a.png"),
+    // Текстура
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-blend-mode: overlay;
 
-  // Контент сайдбара
-  .sidebarContent {
-    padding: 0 20px;
-    margin-top: 203px;
-    position: relative;
-    > * {
-      margin-bottom: 30px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(
+      to bottom,
+      rgba(193, 42, 42, 0.3) 0%,
+      transparent 100%
+    );
   }
 
-  // Стили для печати
-  @media print {
-    position: static;
-    height: auto;
-    min-height: 0;
-    z-index: auto;
-    page-break-inside: avoid;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    background: url("https://i.imgur.com/Kj5N2aX.png") no-repeat;
+    background-size: contain;
+    opacity: 0.08;
+    z-index: 0;
+  }
+}
 
-    .sidebarContent {
-      height: auto;
-      z-index: auto;
-    }
+.sidebarContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skillsTitle {
+  font-family: "Ma Shan Zheng", cursive;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  color: var(--primary-red);
+  font-size: 22px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      to right,
+      var(--primary-red) 0%,
+      transparent 80%
+    );
   }
 }

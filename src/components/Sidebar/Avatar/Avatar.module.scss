@@ -1,44 +1,54 @@
 .avatarWrapper {
-  position: relative; /* или absolute — смотри ниже */
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  border: 3px solid var(--primary-red);
+  border-radius: 50%;
+  padding: 5px;
+  background: var(--ink-black);
+  box-shadow: 
+    0 0 15px rgba(193, 42, 42, 0.6),
+    0 0 30px rgba(249, 213, 229, 0.3);
+  
+  &::before {
+    content: "侍";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary-red);
+    font-size: 24px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 1px solid var(--soft-pink);
+    border-radius: 50%;
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
 
 .avatarImage {
-  width: 220px;
-  height: 220px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  display: block; /* можно оставить */
-  margin-bottom: 30px;
-  margin-left: 0; /* убираем автоцентрирование */
-  border: 3px solid #ffffff;
-  box-shadow: 0 0 0 2px #313638;
-  position: relative; /* если не надо вылазить — relative */
-  z-index: 4;
-  background: #313638;
-  padding: 2px;
-}
-.avatarImage {
-  position: absolute;
-  top: 12px;
-  left: 72px;
-}
-// .avatarContainer {
-//   position: relative;
-//   z-index: 100; // Аватар над полосой
-//   margin: -30px auto 30px;
-// }
+  filter: 
+    grayscale(10%) 
+    contrast(110%) 
+    drop-shadow(0 0 5px rgba(193, 42, 42, 0.5));
+  transition: all 0.3s ease;
 
-// .avatar {
-//   width: 200px;
-//   height: 200px;
-//   border-radius: 50%;
-//   object-fit: cover;
-//   display: block;
-//   margin: 0 auto 30px;
-//   border: 3px solid #ffffff;
-//   box-shadow: 0 0 0 2px #313638; // Дополнительная защита
-//   position: relative;
-//   z-index: 4; // Аватар над линией
-//   background: #313638; // Фон для перекрытия линии
-//   padding: 2px; // Защита от артефактов
-// }
+  &:hover {
+    filter: grayscale(0%) contrast(120%);
+  }
+}

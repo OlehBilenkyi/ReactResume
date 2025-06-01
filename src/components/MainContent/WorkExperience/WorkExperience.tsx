@@ -1,3 +1,4 @@
+import React from "react";
 import {
   WordExperienceContainer,
   WorkExperienH4,
@@ -8,7 +9,6 @@ import {
   MyProjectsContainerName,
   MyProjectsContainer,
 } from "./WorkExperience.module";
-
 
 const Experience = () => (
   <>
@@ -67,7 +67,6 @@ const Experience = () => (
         </WorkExperionseList>
       </WordExperienceContainer>
     </MyProjectsContainer>
-    
   </>
 );
 

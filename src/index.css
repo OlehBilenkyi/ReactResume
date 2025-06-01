@@ -1,13 +1,26 @@
-body {
-  background: #f6f6fa;
-  padding: 40px;
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
+:root {
+  --primary-white: #f8f8f8;
+  --primary-red: #c12a2a;
+  --accent-red: #e74c3c;
+  --soft-pink: #f9d5e5;
+  --dark-charcoal: #333;
+  --ink-black: #1a1a1a;
 }
 
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 10px;
-  padding-left: 20px;
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: var(--primary-white);
+  color: var(--ink-black);
+  margin: 0;
+  background-image: url('sakura-bg.png'); /* Добавим позже */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Добавляем китайский шрифт для заголовков */
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+
+h1, h2, h3 {
+  font-family: 'Ma Shan Zheng', cursive;
 }

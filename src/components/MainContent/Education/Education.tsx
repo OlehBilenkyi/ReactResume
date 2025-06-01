@@ -1,9 +1,13 @@
+import React from "react";
 import {
   EducationContainer,
   EducationTitle,
   NameEducation,
   EducationDip,
   WorkExperienceTime,
+  WorkExperienceList,
+  WorkExperienceItem,
+  WorkExperienceTimeClass,
 } from "./Education.module";
 
 const MyEducation = () => {
@@ -15,20 +19,24 @@ const MyEducation = () => {
           Resources: YouTube (GO-IT, Net Ninja), JavaScript.info, freeCodeCamp,
           ChatGPT.
         </EducationDip>
-        <p className="work-experien-time">2022 - Present</p>
-        <ul className="work-experionse-list">
-          <li className="work-experionse-items">
-            Focused on HTML, CSS,JavaScript (ES6+), React fundamentals
-          </li>
-          <li className="work-experionse-items">
+        <WorkExperienceTimeClass>2022 - Present</WorkExperienceTimeClass>
+        <WorkExperienceList>
+          <WorkExperienceItem>
+            Focused on HTML, CSS, JavaScript (ES6+), React fundamentals
+          </WorkExperienceItem>
+          <WorkExperienceItem>
             Completed projects in both frontend development
-          </li>
-        </ul>
+          </WorkExperienceItem>
+        </WorkExperienceList>
       </EducationContainer>
       <EducationContainer>
         <EducationTitle>Education</EducationTitle>
         <NameEducation>
-          <a href="https://nuos.edu.ua/" target="_blank">
+          <a
+            href="https://nuos.edu.ua/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Admiral Makarov National University of Shipbuilding, Mykolaiv,
             Ukraine
           </a>
@@ -41,4 +49,5 @@ const MyEducation = () => {
     </>
   );
 };
+
 export default MyEducation;

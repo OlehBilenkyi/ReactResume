@@ -1,3 +1,4 @@
+import React from "react";
 import {
   SkillsContainer,
   SkillsTitle,
@@ -5,7 +6,7 @@ import {
   SkillsListItem,
 } from "../LanguagesSoftSkillsTechSkills.styled";
 
-const SoftSkills = () => (
+const Summary: React.FC = () => (
   <SkillsContainer>
     <SkillsTitle>Summary</SkillsTitle>
     <SkillsList>
@@ -14,10 +15,10 @@ const SoftSkills = () => (
         JavaScript, and responsive design. Built 5+ applications with Firebase,
         REST APIs, and modern UI libraries. Passionate about clean code and
         user-friendly interfaces. Seeking a role to grow in a collaborative
-        team.{" "}
+        team.
       </SkillsListItem>
-
     </SkillsList>
   </SkillsContainer>
 );
-export default SoftSkills;
+
+export default Summary;
