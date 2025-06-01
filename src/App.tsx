@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import MainContent from "./components/MainContent/MainContent.tsx";
-import Avatar from "./components/Sidebar/Avatar/Avatar";
-import Sidebar from "./components/Sidebar/Sidebar";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
+import MainContent from "./components/MainContent/MainContent";
+import Avatar from "./components/Sidebar/Avatar/Avatar";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 const Wrapper = styled(motion.div)`
   display: flex;
@@ -22,17 +22,27 @@ const Wrapper = styled(motion.div)`
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, transparent, var(--primary-red), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--primary-red),
+      transparent
+    );
   }
 
   &::after {
     content: "";
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--primary-red), transparent);
     position: absolute;
     top: 60px;
     left: 0;
     right: 0;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--primary-red),
+      transparent
+    );
     z-index: 1;
   }
 `;
@@ -49,13 +59,13 @@ const SakuraPetal: React.FC<SakuraPetalProps> = ({ left, top }) => {
     const handleResize = () => {
       setWindowSize({
         height: window.innerHeight,
-        width: window.innerWidth
+        width: window.innerWidth,
       });
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -68,18 +78,18 @@ const SakuraPetal: React.FC<SakuraPetalProps> = ({ left, top }) => {
         color: "var(--sakura-pink)",
         pointerEvents: "none",
         left,
-        top
+        top,
       }}
       animate={{
         y: [0, windowSize.height],
         x: [0, 50],
         rotate: 360,
-        opacity: [0.7, 0]
+        opacity: [0.7, 0],
       }}
       transition={{
         duration: 15 + Math.random() * 10,
         repeat: Infinity,
-        ease: "linear"
+        ease: "linear",
       }}
     >
       ❀
@@ -106,6 +116,7 @@ const App: React.FC = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
+      {/* Анимация сакуры */}
       <SakuraPetal left="10%" top="5%" />
       <SakuraPetal left="30%" top="15%" />
       <SakuraPetal left="70%" top="8%" />

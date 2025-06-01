@@ -18,7 +18,7 @@
   text-align: center;
 
   &::before {
-    content: "開発者"; // "Разработчик" по-японски
+    content: "開発者"; // "Разработчик" на японском
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,6 +28,7 @@
     font-size: 120px;
     z-index: -1;
     white-space: nowrap;
+    user-select: none;
   }
 
   .name {

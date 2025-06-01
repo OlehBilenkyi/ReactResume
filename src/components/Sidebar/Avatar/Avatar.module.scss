@@ -3,37 +3,61 @@
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10;
+  z-index: 15;
   border: 3px solid var(--primary-red);
   border-radius: 50%;
   padding: 5px;
   background: var(--ink-black);
-  box-shadow: 
-    0 0 15px rgba(193, 42, 42, 0.6),
-    0 0 30px rgba(249, 213, 229, 0.3);
-  
+  box-shadow: 0 0 25px rgba(193, 42, 42, 0.8), 0 0 50px rgba(249, 213, 229, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.7);
+
+  animation: floatAvatar 4s ease-in-out infinite;
+
   &::before {
     content: "侍";
     position: absolute;
-    bottom: -30px;
+    bottom: -32px;
     left: 50%;
     transform: translateX(-50%);
     color: var(--primary-red);
-    font-size: 24px;
+    font-size: 26px;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation: pulseSamurai 2.4s infinite;
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border: 1px solid var(--soft-pink);
+    top: -14px;
+    left: -14px;
+    right: -14px;
+    bottom: -14px;
+    border: 1px dashed var(--soft-pink);
     border-radius: 50%;
-    opacity: 0.5;
+    opacity: 0.4;
     pointer-events: none;
+  }
+}
+
+@keyframes floatAvatar {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -6px);
+  }
+}
+
+@keyframes pulseSamurai {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+    opacity: 0.6;
   }
 }
 
@@ -42,9 +66,7 @@
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  filter: 
-    grayscale(10%) 
-    contrast(110%) 
+  filter: grayscale(10%) contrast(110%)
     drop-shadow(0 0 5px rgba(193, 42, 42, 0.5));
   transition: all 0.3s ease;
 

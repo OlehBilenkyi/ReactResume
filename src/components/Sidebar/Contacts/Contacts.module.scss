@@ -1,13 +1,19 @@
 .contactContainer {
-  margin-bottom: 30px;
+  margin-top: 100px;
   padding: 15px;
-  background: rgba(248, 248, 248, 0.1);
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 20, 20, 0.5) 0%,
+    rgba(248, 248, 248, 0.1) 20%,
+    transparent 100%
+  );
   border-left: 3px solid var(--primary-red);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 -50px 60px rgba(0, 0, 0, 0.4); // как будто аватар отбрасывает свет
 
   &::before {
-    content: "連絡先"; // "Контакты" по-японски
+    content: "連絡先";
     position: absolute;
     top: 10px;
     right: 10px;
@@ -15,69 +21,5 @@
     color: rgba(193, 42, 42, 0.1);
     font-size: 60px;
     z-index: 0;
-  }
-}
-
-.contactsTitel {
-  color: var(--primary-red);
-  font-family: "Ma Shan Zheng", cursive;
-  font-size: 24px;
-  margin-bottom: 15px;
-  position: relative;
-  z-index: 1;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background: var(--soft-pink);
-  }
-}
-
-.contactsItem {
-  margin-bottom: 12px;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-}
-
-.contactsTitle {
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--primary-white);
-  margin-right: 10px;
-  min-width: 80px;
-}
-
-.contactsLinks {
-  text-decoration: none;
-  color: var(--soft-pink);
-  font-weight: 600;
-  font-size: 14px;
-  position: relative;
-  padding-bottom: 2px;
-  transition: all 0.3s ease;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--primary-red);
-    transition: width 0.3s ease;
-  }
-
-  &:hover {
-    color: var(--primary-white);
-
-    &::after {
-      width: 100%;
-    }
   }
 }

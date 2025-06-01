@@ -6,7 +6,10 @@ import Languages from "./Languages/Languages";
 import Summary from "./Summary/Summary";
 import TechSkills from "./TechSkills/TechSkills";
 
-const Sidebar: React.FC = React.forwardRef<HTMLDivElement>((props, ref) => {
+/**
+ * Sidebar component showing summary, skills, languages, and contacts.
+ */
+const Sidebar = React.forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <motion.aside
       initial={{ x: -100, opacity: 0 }}
@@ -24,5 +27,7 @@ const Sidebar: React.FC = React.forwardRef<HTMLDivElement>((props, ref) => {
     </motion.aside>
   );
 });
+
+Sidebar.displayName = "Sidebar";
 
 export default Sidebar;

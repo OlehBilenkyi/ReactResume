@@ -5,22 +5,26 @@
   --soft-pink: #f9d5e5;
   --dark-charcoal: #333;
   --ink-black: #1a1a1a;
+  --sakura-pink: #fbb1c1;
+  --paper-white: #fefefe;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap");
+
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   background-color: var(--primary-white);
   color: var(--ink-black);
   margin: 0;
-  background-image: url('sakura-bg.png'); /* Добавим позже */
+  background-image: url("sakura-bg.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
 
-/* Добавляем китайский шрифт для заголовков */
-@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
-
-h1, h2, h3 {
-  font-family: 'Ma Shan Zheng', cursive;
+h1,
+h2,
+h3 {
+  font-family: "Ma Shan Zheng", cursive;
+  color: var(--primary-red);
 }

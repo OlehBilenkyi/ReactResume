@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+/**
+ * Контейнер секции проектов
+ */
 export const MyProjects = styled.div`
   margin-bottom: 30px;
   padding: 20px;
@@ -19,6 +22,9 @@ export const MyProjects = styled.div`
   }
 `;
 
+/**
+ * Заголовок названия проекта
+ */
 export const ProjName = styled.h3`
   font-size: 24px;
   color: var(--ink-black);
@@ -39,12 +45,18 @@ export const ProjName = styled.h3`
   }
 `;
 
+/**
+ * Список проектов без стандартных маркеров
+ */
 export const MyProjectsList = styled.ol`
   list-style-type: none;
   padding-left: 0;
   counter-reset: project-counter;
 `;
 
+/**
+ * Элемент проекта с порядковым номером
+ */
 export const ProjectItem = styled.li`
   margin-bottom: 25px;
   padding-left: 30px;
@@ -69,6 +81,9 @@ export const ProjectItem = styled.li`
   }
 `;
 
+/**
+ * Заголовок проекта, интерактивный
+ */
 export const ProjectItemTitle = styled.span`
   font-weight: 700;
   font-size: 18px;
@@ -76,6 +91,7 @@ export const ProjectItemTitle = styled.span`
   display: block;
   margin-bottom: 5px;
   transition: all 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     text-decoration: underline;
@@ -83,6 +99,9 @@ export const ProjectItemTitle = styled.span`
   }
 `;
 
+/**
+ * Технологии проекта (стилизованная подпись)
+ */
 export const ProjectItemTech = styled.span`
   font-weight: 400;
   font-size: 14px;
@@ -92,6 +111,9 @@ export const ProjectItemTech = styled.span`
   font-style: italic;
 `;
 
+/**
+ * Список деталей проекта
+ */
 export const ProjectDetails = styled.ul`
   padding-left: 20px;
   margin-top: 10px;

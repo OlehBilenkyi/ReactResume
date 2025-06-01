@@ -11,11 +11,10 @@ const Summary: React.FC = () => (
     <SkillsTitle>Summary</SkillsTitle>
     <SkillsList>
       <SkillsListItem>
-        Junior Front-End Developer with hands-on experience in React,
-        JavaScript, and responsive design. Built 5+ applications with Firebase,
-        REST APIs, and modern UI libraries. Passionate about clean code and
-        user-friendly interfaces. Seeking a role to grow in a collaborative
-        team.
+        🎯 Junior Front-End Developer with hands-on experience in React,
+        JavaScript, and responsive UI. Built 5+ apps using Firebase, REST APIs,
+        and modern UI libraries. Passionate about clean code and UX-centric
+        interfaces. Seeking a role to grow within a collaborative team.
       </SkillsListItem>
     </SkillsList>
   </SkillsContainer>

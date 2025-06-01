@@ -10,14 +10,16 @@ import {
   WorkExperienceTimeClass,
 } from "./Education.module";
 
-const MyEducation = () => {
+/**
+ * Компонент с образованием и самообразованием пользователя
+ */
+const Education: React.FC = () => {
   return (
     <>
       <EducationContainer>
         <EducationTitle>Self-Taught Frontend Development</EducationTitle>
         <EducationDip>
-          Resources: YouTube (GO-IT, Net Ninja), JavaScript.info, freeCodeCamp,
-          ChatGPT.
+          Resources: YouTube (GO-IT, Net Ninja), JavaScript.info, freeCodeCamp, ChatGPT.
         </EducationDip>
         <WorkExperienceTimeClass>2022 - Present</WorkExperienceTimeClass>
         <WorkExperienceList>
@@ -37,8 +39,7 @@ const MyEducation = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Admiral Makarov National University of Shipbuilding, Mykolaiv,
-            Ukraine
+            Admiral Makarov National University of Shipbuilding, Mykolaiv, Ukraine
           </a>
         </NameEducation>
         <EducationDip>
@@ -50,4 +51,4 @@ const MyEducation = () => {
   );
 };
 
-export default MyEducation;
+export default React.memo(Education);

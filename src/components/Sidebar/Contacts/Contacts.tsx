@@ -1,8 +1,6 @@
-
-
-
 import React from "react";
 import styles from "./Contacts.module.scss";
+
 const Contacts: React.FC = () => (
   <div className={styles.contactContainer}>
     <h3 className={styles.contactsTitle}>Contacts</h3>
@@ -45,10 +43,7 @@ const Contacts: React.FC = () => (
 
     <div className={styles.contactsItem}>
       <span className={styles.contactsTitle}>Email:</span>
-      <a
-        href="mailto:13eLuy@gmail.com"
-        className={styles.contactsLinks}
-      >
+      <a href="mailto:13eLuy@gmail.com" className={styles.contactsLinks}>
         13eLuy@gmail.com
       </a>
     </div>
@@ -67,10 +62,7 @@ const Contacts: React.FC = () => (
 
     <div className={styles.contactsItem}>
       <span className={styles.contactsTitle}>Phone:</span>
-      <a
-        href="tel:+380985745049"
-        className={styles.contactsLinks}
-      >
+      <a href="tel:+380985745049" className={styles.contactsLinks}>
         +380985745049
       </a>
     </div>
