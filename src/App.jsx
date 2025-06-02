@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import MainContent from "./components/MainContent/MainContent";
 import Avatar from "./components/Sidebar/Avatar/Avatar";
 import MySidebar from "./components/Sidebar/Sidebar";
@@ -13,15 +15,30 @@ const Wrapper = styled.div`
 `;
 
 const RedStripe = styled.div`
-  position: absolute;
-  height: 150px;
-  background-color: #c00;
-  z-index: 2;
-  left: 0;
-  right: 0;
-  top: 34px; /* Фиксированная позиция под заголовком */
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e74c3c, transparent);
 `;
-
+// const SakuraPetal = () => (
+//   <motion.div
+//     style={{
+//       position: "absolute",
+//       background: "url('sakura-petal.png')", // Прозрачный PNG лепестка
+//       width: "24px",
+//       height: "24px",
+//     }}
+//     animate={{
+//       y: [0, 500],
+//       x: [0, 50],
+//       rotate: 360,
+//       opacity: [1, 0],
+//     }}
+//     transition={{
+//       duration: 10,
+//       repeat: Infinity,
+//       ease: "linear",
+//     }}
+//   />
+// );
 function App() {
   const contentProps = {
     profession: "FRONT-END DEVELOPER (REACT, JAVASCRIPT)",

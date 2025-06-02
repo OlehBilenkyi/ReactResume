@@ -11,3 +11,12 @@ ol {
   margin-bottom: 10px;
   padding-left: 20px;
 }
+
+:root {
+  --primary-red: #e74c3c;        /* Алый как печать */
+  --dark-bg: #1a1a1a;           /* Глубокий чёрный фон */
+  --paper-white: #f9f5f0;        /* Цвет рисовой бумаги */
+  --sakura-pink: #f8bbd0;        /* Лёгкий акцент сакуры */
+  --gold-accent: #d4af37;        /* Золото для деталей */
+  --ink-black: #2c3e50;          /* Цвет туши */
+}

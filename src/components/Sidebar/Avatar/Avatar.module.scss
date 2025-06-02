@@ -10,12 +10,14 @@
   display: block; /* можно оставить */
   margin-bottom: 30px;
   margin-left: 0; /* убираем автоцентрирование */
-  border: 3px solid #ffffff;
+  // border: 3px solid #ffffff;
   box-shadow: 0 0 0 2px #313638;
   position: relative; /* если не надо вылазить — relative */
   z-index: 4;
   background: #313638;
   padding: 2px;
+  border: 2px solid #e74c3c;
+  filter: sepia(20%);
 }
 .avatarImage {
   position: absolute;
