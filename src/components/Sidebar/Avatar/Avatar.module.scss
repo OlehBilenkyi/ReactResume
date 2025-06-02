@@ -1,12 +1,72 @@
 .avatarWrapper {
-  position: relative; /* или absolute — смотри ниже */
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  border: 3px solid var(--primary-red);
+  border-radius: 50%;
+  padding: 5px;
+  background: var(--ink-black);
+  box-shadow: 0 0 25px rgba(193, 42, 42, 0.8), 0 0 50px rgba(249, 213, 229, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.7);
+
+  animation: floatAvatar 4s ease-in-out infinite;
+
+  &::before {
+    content: "侍";
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary-red);
+    font-size: 26px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation: pulseSamurai 2.4s infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: -14px;
+    right: -14px;
+    bottom: -14px;
+    border: 1px dashed var(--soft-pink);
+    border-radius: 50%;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+@keyframes floatAvatar {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -6px);
+  }
+}
+
+@keyframes pulseSamurai {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+    opacity: 0.6;
+  }
 }
 
 .avatarImage {
-  width: 220px;
-  height: 220px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
+<<<<<<< HEAD
   display: block; /* можно оставить */
   margin-bottom: 30px;
   margin-left: 0; /* убираем автоцентрирование */
@@ -29,18 +89,13 @@
 //   z-index: 100; // Аватар над полосой
 //   margin: -30px auto 30px;
 // }
+=======
+  filter: grayscale(10%) contrast(110%)
+    drop-shadow(0 0 5px rgba(193, 42, 42, 0.5));
+  transition: all 0.3s ease;
+>>>>>>> 7a64ef16331fb3af363b4fc01aeb3a9dbcf470c6
 
-// .avatar {
-//   width: 200px;
-//   height: 200px;
-//   border-radius: 50%;
-//   object-fit: cover;
-//   display: block;
-//   margin: 0 auto 30px;
-//   border: 3px solid #ffffff;
-//   box-shadow: 0 0 0 2px #313638; // Дополнительная защита
-//   position: relative;
-//   z-index: 4; // Аватар над линией
-//   background: #313638; // Фон для перекрытия линии
-//   padding: 2px; // Защита от артефактов
-// }
+  &:hover {
+    filter: grayscale(0%) contrast(120%);
+  }
+}

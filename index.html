@@ -1,20 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- 🔧 Meta-теги -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oleh Bilenkyi Resume</title>
+
+    <!-- 📛 SEO -->
+    <title>Oleh Bilenkyi — Mystical Samurai Resume</title>
+    <meta
+      name="description"
+      content="Portfolio of Oleh Bilenkyi — Front-End Developer, React & JS master with a soul of a samurai. Visual resume inspired by Bushido."
+    />
+    <meta
+      name="keywords"
+      content="Oleh Bilenkyi, Frontend Developer, React, Resume, Samurai, Portfolio, JavaScript, Web Developer Poland"
+    />
+    <meta name="author" content="Oleh Bilenkyi" />
+
+    <!-- 🌐 Open Graph (для соцсетей и мессенджеров) -->
+    <meta property="og:title" content="Oleh Bilenkyi — Samurai React Resume" />
+    <meta
+      property="og:description"
+      content="Visual resume of a mystical samurai. Front-End Developer & React master."
+    />
+    <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- 📱 Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- 🔗 Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Montserrat:wght@400;500;700&family=Ma+Shan+Zheng&display=swap"
       rel="stylesheet"
     />
+
+    <!-- 🎨 Основной стиль -->
     <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- ✨ Theme Color -->
+    <meta name="theme-color" content="#c12a2a" />
   </head>
+
   <body>
     <div id="root"></div>
+
+    <!-- 🔥 Основной JS (Vite/React) -->
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- 🎵 Эстетика: Японский звук при открытии страницы -->
+    <!-- <audio src="/sounds/wind-chime.mp3" autoplay hidden></audio> -->
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const petalCount = 15;
+      const body = document.body;
+
+      for (let i = 0; i < petalCount; i++) {
+        createPetal();
+      }
+
+      function createPetal() {
+        const petal = document.createElement("div");
+        petal.classList.add("petal");
+
+        // Случайные параметры
+        const size = Math.random() * 15 + 10;
+        const posX = Math.random() * window.innerWidth;
+        const delay = Math.random() * 15;
+        const duration = Math.random() * 10 + 10;
+
+        petal.style.width = `${size}px`;
+        petal.style.height = `${size}px`;
+        petal.style.left = `${posX}px`;
+        petal.style.animationDelay = `${delay}s`;
+        petal.style.animationDuration = `${duration}s`;
+
+        document.body.appendChild(petal);
+
+        // Пересоздаем лепесток после завершения анимации
+        petal.addEventListener("animationend", () => {
+          petal.remove();
+          createPetal();
+        });
+      }
+    });
+  </script>
 </html>
