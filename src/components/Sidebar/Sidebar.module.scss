@@ -27,60 +27,6 @@
     }
   }
 
-  .sectionTitle {
-    background-color: var(--section-title-bg);
-    color: var(--text-color);
-    padding: 8px 15px;
-    margin-bottom: 15px;
-    font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
-    font-weight: 600;
-    border-radius: 3px;
-  }
-
-  /* Контакты */
-  .contactsItem {
-    margin-bottom: 15px;
-  }
-
-  .contactsLabel {
-    font-size: 0.9em;
-    font-weight: 600;
-    margin-bottom: 3px;
-    opacity: 0.8;
-  }
-
-  .contactsLink {
-    font-size: 1em;
-    line-height: 1.3;
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: var(--highlight-color);
-    }
-  }
-
-  /* Списки */
-  .skillsList {
-    padding-left: 20px;
-
-    &--no-bullets {
-      list-style: none;
-      padding-left: 0;
-    }
-  }
-
-  .skillsListItem {
-    margin-bottom: 8px;
-    line-height: 1.4;
-
-    strong {
-      font-weight: 600;
-    }
-  }
-
-  /* Адаптация для планшетов */
   @media (max-width: 992px) {
     width: 300px;
     margin-left: 30px;
@@ -90,18 +36,8 @@
     &__photo {
       margin-bottom: 20px;
     }
-
-    .sectionTitle {
-      font-size: 1rem;
-      padding: 6px 10px;
-    }
-
-    .contactsItem {
-      margin-bottom: 12px;
-    }
   }
 
-  /* Адаптация для мобильных */
   @media (max-width: 768px) {
     width: 100%;
     margin-left: 0;
@@ -111,27 +47,87 @@
     &__photo {
       margin-bottom: 15px;
     }
+  }
+}
 
-    .sectionTitle {
-      font-size: 0.9rem;
-      padding: 5px 10px;
+.sectionTitle {
+  background-color: var(--section-title-bg);
+  color: var(--text-color);
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
+  font-weight: 600;
+  border-radius: 3px;
+
+  @media (max-width: 992px) {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+}
+
+.contactsItem {
+  margin-bottom: 15px;
+
+  @media (max-width: 992px) {
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+}
+
+.contactsLabel {
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-bottom: 3px;
+  opacity: 0.8;
+}
+
+.contactsLink {
+  font-size: 1em;
+  line-height: 1.3;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--highlight-color);
+  }
+}
+
+.skillsList {
+  padding-left: 20px;
+
+  &--no-bullets {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 15px;
+
+    &--no-bullets {
+      padding-left: 0;
     }
+  }
+}
 
-    .skillsList {
-      padding-left: 15px;
+.skillsListItem {
+  margin-bottom: 8px;
+  line-height: 1.4;
 
-      &--no-bullets {
-        padding-left: 0;
-      }
-    }
+  strong {
+    font-weight: 600;
+  }
 
-    .skillsListItem {
-      margin-bottom: 5px;
-      line-height: 1.3;
-    }
-
-    .contactsItem {
-      margin-bottom: 10px;
-    }
+  @media (max-width: 768px) {
+    margin-bottom: 5px;
+    line-height: 1.3;
   }
 }

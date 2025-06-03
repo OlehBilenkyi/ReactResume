@@ -21,9 +21,11 @@
     font-weight: 400;
     letter-spacing: 1px;
   }
+}
 
-  /* Планшеты и небольшие экраны */
-  @media (max-width: 992px) {
+/* Планшеты и небольшие экраны */
+@media (max-width: 992px) {
+  .nameSection {
     padding: 20px 30px;
     top: 80px;
 
@@ -32,9 +34,11 @@
       font-size: clamp(1.8rem, 1.3rem + 1.2vw, 2.5rem);
     }
   }
+}
 
-  /* Мобильные устройства */
-  @media (max-width: 768px) {
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .nameSection {
     position: static;
     padding: 20px 15px;
     width: auto;
