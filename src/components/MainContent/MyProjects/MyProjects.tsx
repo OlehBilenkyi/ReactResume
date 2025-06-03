@@ -1,74 +1,46 @@
-import {
-  WordExperienceContainer,
-  WorkExperienH4,
-  WorkExperienTime,
-  WorkExperionseSeparator,
-  WorkExperionseList,
-  WorkExperionseItems,
-  MyProjectsContainerName,
-  MyProjectsContainer,
-} from "../WorkExperience/WorkExperience.module";
+import React from "react";
+import styles from "./MyProjects.module.scss";
 
+interface ProjectItemProps {
+  title: string;
+  time: string;
+  description: string;
+}
 
-const Experience = () => (
+const ProjectItem: React.FC<ProjectItemProps> = ({
+  title,
+  time,
+  description,
+}) => (
+  <div className={styles.ProjectItem}>
+    <h4 className={styles.ProjectTitle}>{title}</h4>
+    <p className={styles.ProjectTime}>
+      {time} <span className={styles.ProjectSeparator}>|</span> Remote
+    </p>
+    <ul className={styles.ProjectList}>
+      <li className={styles.ProjectListItem}>{description}</li>
+    </ul>
+  </div>
+);
+
+const MyProjects: React.FC = () => (
   <>
-    <MyProjectsContainer>
-      <MyProjectsContainerName>Experience</MyProjectsContainerName>
-      <WordExperienceContainer>
-        <WorkExperienH4>
-          Front-End Developer (Personal Projects & Freelance)
-        </WorkExperienH4>
-        <WorkExperienTime>
-          Jan 2024 – Present
-          <WorkExperionseSeparator>|</WorkExperionseSeparator> Remote
-        </WorkExperienTime>
-        <WorkExperionseList>
-          <WorkExperionseItems>
-            Developed 4 React applications with Firebase, APIs, and responsive
-            design. Key projects: Meal Planner Pro, RealEstateHub (details in
-            Projects).
-          </WorkExperionseItems>
-        </WorkExperionseList>
-      </WordExperienceContainer>
-    </MyProjectsContainer>
-    <MyProjectsContainer>
-      <WordExperienceContainer>
-        <WorkExperienH4>
-          Web Developer (Project Owner) | FoodCase Catering — Kraków, Poland
-        </WorkExperienH4>
-        <WorkExperienTime>
-          Feb 2023 – Dec 2023
-          <WorkExperionseSeparator>|</WorkExperionseSeparator> Remote
-        </WorkExperienTime>
-        <WorkExperionseList>
-          <WorkExperionseItems>
-            Full-cycle development of a smart catering system: UI/UX, admin
-            dashboard, secure authentication. Built order/payment system with
-            Stripe, Google OAuth, and MySQL. Implemented AI-powered menu
-            generation and real-time analytics.
-          </WorkExperionseItems>
-        </WorkExperionseList>
-      </WordExperienceContainer>
-    </MyProjectsContainer>
-    <MyProjectsContainer>
-      <WordExperienceContainer>
-        <WorkExperienH4>
-          Junior JavaScript Developer (Internship)
-        </WorkExperienH4>
-        <WorkExperienTime>
-          Feb 2022 – Mar 2022
-          <WorkExperionseSeparator>|</WorkExperionseSeparator> Remote
-        </WorkExperienTime>
-        <WorkExperionseList>
-          <WorkExperionseItems>
-            Developed e-commerce platforms with Stripe and Telegram API
-            integrations.
-          </WorkExperionseItems>
-        </WorkExperionseList>
-      </WordExperienceContainer>
-    </MyProjectsContainer>
-    
+    <div className={styles.MyProjectsContainer}>
+      <h2 className={styles.MyProjectsTitle}>Projects</h2>
+      <ProjectItem
+        title="Front-End Developer (Personal Projects & Freelance)"
+        time="Jan 2024 – Present"
+        description="Developed 4 React applications with Firebase, APIs, and responsive design. Key projects: Meal Planner Pro, RealEstateHub."
+      />
+    </div>
+    <div className={styles.MyProjectsContainer}>
+      <ProjectItem
+        title="Web Developer (Project Owner) | FoodCase Catering"
+        time="Feb 2023 – Dec 2023"
+        description="Full-cycle development of a smart catering system: UI/UX, admin dashboard, secure authentication."
+      />
+    </div>
   </>
 );
 
-export default Experience;
+export default MyProjects;

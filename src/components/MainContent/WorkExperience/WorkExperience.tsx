@@ -1,59 +1,63 @@
 import {
-  WordExperienceContainer,
-  WorkExperienH4,
-  WorkExperienTime,
-  WorkExperionseSeparator,
-  WorkExperionseList,
-  WorkExperionseItems,
-  MyProjectsContainerName,
-  MyProjectsContainer,
+  ExperienceContainer,
+  ExperienceTitle,
+  ExperienceItem,
+  Timeline,
+  TimelineDot,
+  TimelineLine,
+  ExperienceContent,
+  Dates,
+  Company,
+  JobTitle,
+  DetailsList,
+  ListItem,
 } from "./WorkExperience.module";
 
 const Experience = () => (
-  <>
-    <MyProjectsContainer>
-      <MyProjectsContainerName>Work Experience</MyProjectsContainerName>
-      <WordExperienceContainer>
-        <WorkExperienH4>
-          Junior JavaScript Developer (Internship)
-        </WorkExperienH4>
-        <WorkExperienTime>
-          February 2023 - Present
-          <WorkExperionseSeparator>|</WorkExperionseSeparator> Remote
-        </WorkExperienTime>
-        <WorkExperionseList>
-          <WorkExperionseItems>
+  <ExperienceContainer>
+    <ExperienceTitle>Work Experience</ExperienceTitle>
+    <ExperienceItem>
+      <Timeline>
+        <TimelineDot />
+        <TimelineLine />
+      </Timeline>
+      <ExperienceContent>
+        <Dates>February 2023 - Present</Dates>
+        <Company>Remote</Company>
+        <JobTitle>Junior JavaScript Developer (Internship)</JobTitle>
+        <DetailsList>
+          <ListItem>
             Developed and maintained web applications including landing pages,
             small e-commerce platforms, and mobile apps
-          </WorkExperionseItems>
-          <WorkExperionseItems>
+          </ListItem>
+          <ListItem>
             Integrated payment systems (Stripe API) and worked with various APIs
             (Google OAuth, Telegram)
-          </WorkExperionseItems>
-          <WorkExperionseItems>
+          </ListItem>
+          <ListItem>
             Optimized performance of web services and managed server
             configurations
-          </WorkExperionseItems>
-          <WorkExperionseItems>
+          </ListItem>
+          <ListItem>
             Created responsive web components and interactive user interfaces
             using modern JavaScript
-          </WorkExperionseItems>
-          <WorkExperionseItems>
+          </ListItem>
+          <ListItem>
             Implemented security measures including CSRF protection and Google
             reCAPTCHA
-          </WorkExperionseItems>
-          <WorkExperionseItems>
+          </ListItem>
+          <ListItem>
             Managed tasks using Trello and followed technical specifications
             (ToR)
-          </WorkExperionseItems>
-          <WorkExperionseItems>
+          </ListItem>
+          <ListItem>
             Used Git for version control and Composer for PHP dependency
             management
-          </WorkExperionseItems>
-        </WorkExperionseList>
-      </WordExperienceContainer>
-    </MyProjectsContainer>
-  </>
+          </ListItem>
+        </DetailsList>
+      </ExperienceContent>
+    </ExperienceItem>
+  </ExperienceContainer>
 );
 
 export default Experience;

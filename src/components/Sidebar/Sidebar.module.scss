@@ -1,157 +1,93 @@
-.sidebar {
+.mySidebar {
   position: relative;
   background-color: teal;
   margin-left: 50px;
   color: #fff;
   padding: 77px 30px 25px 30px;
+   // Глобальные стили для дочерних компонентов
+    :global {
+      .contactItem {
+        margin-bottom: 12px;
 
-  // Фото
-  &__photo {
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
+        .label {
+          font-size: 0.9rem;
+          font-weight: 600;
+          margin-bottom: 3px;
+          opacity: 0.9;
+        }
 
-    &-link {
-      display: block;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
+        .value {
+          font-size: 0.95rem;
+          line-height: 1.4;
+        }
+      }
 
-    &-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
+      .list {
+        padding-left: 18px;
 
-      &:hover {
-        transform: scale(1.1);
+        li {
+          margin-bottom: 6px;
+          line-height: 1.4;
+          font-size: 0.95rem;
+        }
+
+        &.languageList {
+          list-style: none;
+          padding-left: 0;
+        }
       }
     }
+}
+.sidebar {
+  &.template5Theme {
+    background-color: teal;
+    color: #fff;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+
+    .sidebar__photo {
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+
+      &Img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 4px;
+        transition: transform 0.3s ease;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    .sidebar__section {
+      > * {
+        background-color: hsla(0, 0%, 100%, 0.15);
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        h2,
+        h3 {
+          color: #fff;
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+
+   
   }
-
-  // Общие секции: summary, skills, contacts, languages
-  &__section {
-    margin-bottom: 30px;
-
-    &-title {
-      background-color: hsla(0, 0%, 100%, 0.15);
-      color: #fff;
-      padding: 8px 15px;
-      margin-bottom: 15px;
-      font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
-      font-weight: 600;
-      border-radius: 3px;
-    }
-
-    &-list {
-      padding-left: 20px;
-      list-style: disc;
-
-      &-item {
-        margin-bottom: 8px;
-        line-height: 1.4;
-      }
-    }
-
-    &--languages {
-      ul {
-        list-style: none;
-        padding-left: 0;
-      }
-    }
-  }
-
-  // Контакты
-  &__contact {
-    margin-bottom: 30px;
-
-    &-item {
-      margin-bottom: 15px;
-    }
-
-    &-label {
-      font-size: 0.9em;
-      font-weight: 600;
-      margin-bottom: 3px;
-      opacity: 0.8;
-    }
-
-    &-info {
-      font-size: 1em;
-      font-style: normal;
-      line-height: 1.3;
-    }
-
-    &-link {
-      color: #fff;
-      text-decoration: none;
-
-      &:hover {
-        color: #ddd;
-      }
-    }
-  }
-
-  // Образование
-  &__education {
-    &-item {
-      margin-bottom: 15px;
-
-      .degree {
-        font-weight: 600;
-        font-size: 1.05em;
-        margin-bottom: 4px;
-        line-height: 1.3;
-      }
-
-      .university,
-      .dates,
-      .gpa {
-        margin-bottom: 4px;
-        line-height: 1.3;
-      }
-
-      .dates {
-        font-size: 0.9em;
-        margin-bottom: 5px;
-      }
-    }
-  }
-}
-.contactContainer {
-  margin-bottom: 30px;
-}
-
-.contactsTitel {
-  background-color: hsla(0, 0%, 100%, 0.15);
-  color: #fff;
-  padding: 8px 15px;
-  margin-bottom: 15px;
-  font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
-  font-weight: 600;
-  border-radius: 3px;
-}
-
-.contactsItem {
-  margin-bottom: 15px;
-}
-
-.contactsTitle {
-  font-size: 0.9em;
-  font-weight: 600;
-  margin-bottom: 3px;
-  opacity: 0.8;
-}
-
-.contactsLinks {
-  font-size: 1em;
-  font-style: normal;
-  line-height: 1.3;
-  color: #fff;
-  text-decoration: none;
-}
-
-.contactsLinks:hover {
-  color: #ddd;
 }

@@ -1,4 +1,4 @@
-import styles from "../ContactsLanguagesSummaryTechSkills.module.scss";
+import styles from "./Contacts.module.scss";
 
 const Contacts = () => (
   <div className={styles.skillsContainer}>
@@ -9,6 +9,7 @@ const Contacts = () => (
         className={styles.contactsLinks}
         href="https://github.com/OlehBilenkyi"
         target="_blank"
+        rel="noopener noreferrer"
       >
         OlehBilenkyi
       </a>
@@ -19,6 +20,7 @@ const Contacts = () => (
         className={styles.contactsLinks}
         href="https://www.linkedin.com/in/oleh-bilenkyi-95a55b177/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Oleh Bilenkyi
       </a>
@@ -29,6 +31,7 @@ const Contacts = () => (
         className={styles.contactsLinks}
         href="https://www.facebook.com/profile.php?id=100005711576476"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Oleh Bilenkyi
       </a>

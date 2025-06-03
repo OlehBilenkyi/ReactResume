@@ -1,14 +1,12 @@
 import MyInfo from "./MyInfo/MyInfo";
 import Projects from "./MyProjects/MyProjects";
 import Experience from "./WorkExperience/WorkExperience";
-import { MainContentWrapper } from "./MainContent.styled";
+import styles from "./MainContent.module.scss";
 import MyEducation from "./Education/Education";
 
 type MainContentProps = {
   profession: string;
-
   name: string;
-
   description: string;
 };
 
@@ -17,12 +15,24 @@ const MainContent: React.FC<MainContentProps> = ({
   name,
   description,
 }) => (
-  <MainContentWrapper>
-    <MyInfo profession={profession} name={name} description={description} />
-    <Experience />
-    <Projects />
-    <MyEducation />
-  </MainContentWrapper>
+  <div className={styles.mainContent}>
+    {/* Apply other style classes as needed */}
+    <div className={styles.mainContent__section}>
+      <h2 className={styles.mainContent__sectionTitle}>About Me</h2>
+      <p className={styles.mainContent__paragraph}>{description}</p>
+    </div>
+    <div className={styles.mainContent__body}>
+      <div className={styles.section}>
+        <Experience />
+      </div>
+      <div className={styles.section}>
+        <Projects />
+      </div>
+      <div className={styles.section}>
+        <MyEducation />
+      </div>
+    </div>
+  </div>
 );
 
 export default MainContent;

@@ -1,0 +1,23 @@
+.nameSection {
+  background-color: #2dbdbd;
+  position: absolute;
+  color: #fff;
+  padding: 30px 40px;
+  text-align: center;
+  width: 100%;
+  top: 105px;
+
+  .name {
+    margin: 0 0 5px 107px;
+    font-size: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .title {
+    margin: 0;
+    font-size: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+}
