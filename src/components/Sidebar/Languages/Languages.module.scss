@@ -1,0 +1,23 @@
+.skillsContainer {
+  margin-bottom: 30px;
+}
+
+.skillsTitle {
+  background-color: #066;
+  color: #fff;
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+.skillsList {
+  padding-left: 0;
+  list-style: none;
+}
+
+.skillsListItem {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
