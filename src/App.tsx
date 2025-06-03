@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <MySidebar />
-      <NameSection name="ELENA PETROVA" title="Frontend Developer" />
+      <NameSection name="Oleh Bilenkyi" title="Frontend Developer" />
       <MainContent
         profession="Junior Web Developer"
         name="Oleh Bilenkyi"
