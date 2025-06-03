@@ -1,0 +1,38 @@
+.skillsContainer {
+  margin-bottom: 20px;
+}
+
+.skillsTitle {
+  background-color: hsla(0, 0%, 100%, 0.15);
+  color: #fff;
+  background-color: #066;
+  color: #fff;
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+.skillsList {
+  padding-left: 18px;
+}
+
+.skillsListItem {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgb(255, 255, 255);
+}
+
+.contactsLinks {
+  font-size: 1em;
+  font-style: normal;
+  line-height: 1.3;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contactsLinks:hover {
+  color: #ddd;
+}

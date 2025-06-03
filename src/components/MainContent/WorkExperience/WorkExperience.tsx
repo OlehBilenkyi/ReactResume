@@ -1,74 +1,59 @@
-import React from "react";
 import {
-  ExperienceSection,
-  ExperienceTitle,
-  ExperienceCard,
-  ExperiencePosition,
-  ExperiencePeriod,
-  Separator,
-  ExperienceList,
-  ExperienceListItem,
+  WordExperienceContainer,
+  WorkExperienH4,
+  WorkExperienTime,
+  WorkExperionseSeparator,
+  WorkExperionseList,
+  WorkExperionseItems,
+  MyProjectsContainerName,
+  MyProjectsContainer,
 } from "./WorkExperience.module";
 
-/**
- * Опыт работы и проекты пользователя
- * @returns {JSX.Element}
- */
-const Experience: React.FC = () => (
-  <ExperienceSection>
-    <ExperienceTitle>Experience</ExperienceTitle>
-
-    <ExperienceCard>
-      <ExperiencePosition>
-        Front-End Developer (Personal Projects & Freelance)
-      </ExperiencePosition>
-      <ExperiencePeriod>
-        Jan 2024 – Present
-        <Separator>|</Separator> Remote
-      </ExperiencePeriod>
-      <ExperienceList>
-        <ExperienceListItem>
-          Developed 4 React applications with Firebase, APIs, and responsive
-          design. Key projects: Meal Planner Pro, RealEstateHub (details in
-          Projects).
-        </ExperienceListItem>
-      </ExperienceList>
-    </ExperienceCard>
-
-    <ExperienceCard>
-      <ExperiencePosition>
-        Web Developer (Project Owner) | FoodCase Catering — Kraków, Poland
-      </ExperiencePosition>
-      <ExperiencePeriod>
-        Feb 2023 – Dec 2023
-        <Separator>|</Separator> Remote
-      </ExperiencePeriod>
-      <ExperienceList>
-        <ExperienceListItem>
-          Full-cycle development of a smart catering system: UI/UX, admin
-          dashboard, secure authentication. Built order/payment system with
-          Stripe, Google OAuth, and MySQL. Implemented AI-powered menu
-          generation and real-time analytics.
-        </ExperienceListItem>
-      </ExperienceList>
-    </ExperienceCard>
-
-    <ExperienceCard>
-      <ExperiencePosition>
-        Junior JavaScript Developer (Internship)
-      </ExperiencePosition>
-      <ExperiencePeriod>
-        Feb 2022 – Mar 2022
-        <Separator>|</Separator> Remote
-      </ExperiencePeriod>
-      <ExperienceList>
-        <ExperienceListItem>
-          Developed e-commerce platforms with Stripe and Telegram API
-          integrations.
-        </ExperienceListItem>
-      </ExperienceList>
-    </ExperienceCard>
-  </ExperienceSection>
+const Experience = () => (
+  <>
+    <MyProjectsContainer>
+      <MyProjectsContainerName>Work Experience</MyProjectsContainerName>
+      <WordExperienceContainer>
+        <WorkExperienH4>
+          Junior JavaScript Developer (Internship)
+        </WorkExperienH4>
+        <WorkExperienTime>
+          February 2023 - Present
+          <WorkExperionseSeparator>|</WorkExperionseSeparator> Remote
+        </WorkExperienTime>
+        <WorkExperionseList>
+          <WorkExperionseItems>
+            Developed and maintained web applications including landing pages,
+            small e-commerce platforms, and mobile apps
+          </WorkExperionseItems>
+          <WorkExperionseItems>
+            Integrated payment systems (Stripe API) and worked with various APIs
+            (Google OAuth, Telegram)
+          </WorkExperionseItems>
+          <WorkExperionseItems>
+            Optimized performance of web services and managed server
+            configurations
+          </WorkExperionseItems>
+          <WorkExperionseItems>
+            Created responsive web components and interactive user interfaces
+            using modern JavaScript
+          </WorkExperionseItems>
+          <WorkExperionseItems>
+            Implemented security measures including CSRF protection and Google
+            reCAPTCHA
+          </WorkExperionseItems>
+          <WorkExperionseItems>
+            Managed tasks using Trello and followed technical specifications
+            (ToR)
+          </WorkExperionseItems>
+          <WorkExperionseItems>
+            Used Git for version control and Composer for PHP dependency
+            management
+          </WorkExperionseItems>
+        </WorkExperionseList>
+      </WordExperienceContainer>
+    </MyProjectsContainer>
+  </>
 );
 
 export default Experience;

@@ -1,35 +1,29 @@
-import React from "react";
-import {
-  SkillsContainer,
-  SkillsTitle,
-  SkillsList,
-  SkillsListItem,
-} from "../LanguagesSoftSkillsTechSkills.styled";
+import styles from "../ContactsLanguagesSummaryTechSkills.module.scss";
 
-const TechSkills: React.FC = () => (
-  <SkillsContainer>
-    <SkillsTitle>Tech Stack</SkillsTitle>
-    <SkillsList>
-      <SkillsListItem>
+const TechSkills = () => (
+  <div className={styles.skillsContainer}>
+    <h3 className={styles.skillsTitle}>Tech Stack</h3>
+    <h4 className={styles.skillsList}>
+      <p className={styles.skillsListItem}>
         <strong>Languages & Libraries:</strong> HTML5, CSS3, JavaScript (ES6+),
-        React (Hooks, Router), SASS, TypeScript (basic), Redux
-      </SkillsListItem>
-      <SkillsListItem>
-        <strong>Tools:</strong> Git, GitHub, Webpack, Vite, Figma, Trello
-      </SkillsListItem>
-      <SkillsListItem>
-        <strong>APIs & Backend:</strong> REST API, Firebase, PHP (basic), MySQL
-        (basic)
-      </SkillsListItem>
-      <SkillsListItem>
+        React (Hooks, Router), Bootstrap, SASS, TypeScript (basic), Redux
+      </p>
+      <p className={styles.skillsListItem}>
+        <strong>Tools:</strong> Git, GitHub, Webpack, Vite, Figma, Trello,
+        Chrome DevTools
+      </p>
+      <p className={styles.skillsListItem}>
+        <strong>APIs & Backend:</strong> REST API, PHP (basic), MySQL (basic)
+      </p>
+      <p className={styles.skillsListItem}>
         <strong>UI Frameworks:</strong> Material UI (MUI), Bootstrap
-      </SkillsListItem>
-      <SkillsListItem>
-        <strong>Soft Skills:</strong> Teamwork, Communication, Adaptability,
-        Self-Motivation, Time Management
-      </SkillsListItem>
-    </SkillsList>
-  </SkillsContainer>
+      </p>
+      <p className={styles.skillsListItem}>
+        <strong>Soft Skills:</strong> Teamwork, communication, adaptability,
+        self-motivation, time management
+      </p>
+    </h4>
+  </div>
 );
 
 export default TechSkills;

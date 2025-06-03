@@ -1,159 +1,24 @@
-:root {
-  --primary-white: #f8f8f8;
-  --primary-red: #c12a2a;
-  --accent-red: #e74c3c;
-  --soft-pink: #f9d5e5;
-  --dark-charcoal: #333;
-  --ink-black: #1a1a1a;
-  --sakura-pink: #fbb1c1;
-  --paper-white: #fefefe;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap");
-
-/* Анимация падающих лепестков */
-@keyframes falling {
-  0% {
-    transform: translateY(-100px) rotate(0deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-<<<<<<< HEAD
-:root {
-  --primary-red: #e74c3c;        /* Алый как печать */
-  --dark-bg: #1a1a1a;           /* Глубокий чёрный фон */
-  --paper-white: #f9f5f0;        /* Цвет рисовой бумаги */
-  --sakura-pink: #f8bbd0;        /* Лёгкий акцент сакуры */
-  --gold-accent: #d4af37;        /* Золото для деталей */
-  --ink-black: #2c3e50;          /* Цвет туши */
-}
-=======
-body {
-  font-family: "Noto Sans JP", sans-serif;
-  background-color: var(--primary-white);
-  color: var(--ink-black);
+/* Сброс стилей */
+* {
   margin: 0;
-  background-image: url("https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&w=1600"); /* Цветущая сакура ночью */
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: overlay;
-  background-color: rgba(248, 248, 248, 0.9);
-}
-/* Генератор лепестков */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: -1;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.petal {
-  position: absolute;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23fbb1c1"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>');
-  background-size: contain;
-  width: 20px;
-  height: 20px;
-  opacity: 0;
-  animation: falling 15s linear infinite;
-}
-h1,
-h2,
-h3 {
-  font-family: "Ma Shan Zheng", cursive;
-  color: var(--primary-red);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+/* Шрифты */
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.sidebarWrapper {
-  background: linear-gradient(
-      135deg,
-      rgba(25, 25, 25, 0.85) 0%,
-      rgba(80, 20, 20, 0.85) 100%
-    ),
-    url("https://i.imgur.com/JR7lF2r.jpg"); /* Японская текстура */
-  background-blend-mode: multiply;
-  backdrop-filter: blur(4px);
-  background-size: cover;
-  color: var(--primary-white);
-  padding: 80px 25px 25px;
-  width: 350px;
-  position: relative;
-  border-right: 2px solid var(--accent-red);
-  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.5);
-  z-index: 1;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background: linear-gradient(
-      to bottom,
-      rgba(193, 42, 42, 0.4) 0%,
-      transparent 100%
-    );
-    z-index: 1;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 120px;
-    height: 120px;
-    background: url("https://images.unsplash.com/photo-1558021212-51b6ecfa0db6?ixlib=rb-4.0.3&w=200")
-      no-repeat;
-    background-size: contain;
-    opacity: 0.1;
-    z-index: 0;
-    filter: sepia(60%) hue-rotate(-10deg) brightness(0.8);
-  }
+/* Общие стили */
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
-.sidebarContent {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+/* Стили для корневого элемента React */
+#root {
+  width: 100%;
+  height: 100%;
 }
-
-.skillsTitle {
-  font-family: "Ma Shan Zheng", cursive;
-  font-size: 22px;
-  letter-spacing: 2px;
-  color: var(--sakura-pink);
-  position: relative;
-  display: inline-block;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, var(--accent-red), transparent 80%);
-  }
-}
-
->>>>>>> 7a64ef16331fb3af363b4fc01aeb3a9dbcf470c6

@@ -1,30 +1,20 @@
-import React from 'react';
-import styles from './MyInfo.module.scss';
+import React from "react";
+import styles from "./MyInfo.module.scss";
 
-interface MyInfoProps {
-  /** Полное имя пользователя */
-  name: string;
-  /** Профессия или описание */
+type MyInfoProps = {
   profession: string;
-}
+  name: string;
+  description: string;
+};
 
-/**
- * Компонент отображения имени и профессии с красивым японским стилем.
- * Поддерживает forwardRef для внешнего управления.
- */
-const MyInfo = React.memo(
-  React.forwardRef<HTMLDivElement, MyInfoProps>(({ name, profession }, ref) => {
-    return (
-      <section ref={ref} className={styles.infoContainer} aria-label="User Information">
-        <div className={styles.headerContent}>
-          <h1 className={styles.name}>{name}</h1>
-          <h2 className={styles.profession}>{profession}</h2>
-        </div>
-      </section>
-    );
-  })
-);
-
-MyInfo.displayName = 'MyInfo';
+const MyInfo: React.FC<MyInfoProps> = ({ profession, name, description }) => {
+  return (
+    <div className={styles.infoContainer}>
+      <h2 className={styles.profession}>{profession}</h2>
+      <h1 className={styles.name}>{name}</h1>
+      <p className={styles.description}>{description}</p>
+    </div>
+  );
+};
 
 export default MyInfo;

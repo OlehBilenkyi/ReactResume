@@ -1,45 +1,36 @@
-import React from "react";
 import {
   EducationContainer,
   EducationTitle,
   NameEducation,
   EducationDip,
   WorkExperienceTime,
-  WorkExperienceList,
-  WorkExperienceItem,
-  WorkExperienceTimeClass,
 } from "./Education.module";
 
-/**
- * Компонент с образованием и самообразованием пользователя
- */
-const Education: React.FC = () => {
+const MyEducation = () => {
   return (
     <>
       <EducationContainer>
         <EducationTitle>Self-Taught Frontend Development</EducationTitle>
         <EducationDip>
-          Resources: YouTube (GO-IT, Net Ninja), JavaScript.info, freeCodeCamp, ChatGPT.
+          Resources: YouTube (GO-IT, Net Ninja), JavaScript.info, freeCodeCamp,
+          ChatGPT.
         </EducationDip>
-        <WorkExperienceTimeClass>2022 - Present</WorkExperienceTimeClass>
-        <WorkExperienceList>
-          <WorkExperienceItem>
-            Focused on HTML, CSS, JavaScript (ES6+), React fundamentals
-          </WorkExperienceItem>
-          <WorkExperienceItem>
+        <p className="work-experien-time">2022 - Present</p>
+        <ul className="work-experionse-list">
+          <li className="work-experionse-items">
+            Focused on HTML, CSS,JavaScript (ES6+), React fundamentals
+          </li>
+          <li className="work-experionse-items">
             Completed projects in both frontend development
-          </WorkExperienceItem>
-        </WorkExperienceList>
+          </li>
+        </ul>
       </EducationContainer>
       <EducationContainer>
         <EducationTitle>Education</EducationTitle>
         <NameEducation>
-          <a
-            href="https://nuos.edu.ua/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Admiral Makarov National University of Shipbuilding, Mykolaiv, Ukraine
+          <a href="https://nuos.edu.ua/" target="_blank">
+            Admiral Makarov National University of Shipbuilding, Mykolaiv,
+            Ukraine
           </a>
         </NameEducation>
         <EducationDip>
@@ -50,5 +41,4 @@ const Education: React.FC = () => {
     </>
   );
 };
-
-export default React.memo(Education);
+export default MyEducation;

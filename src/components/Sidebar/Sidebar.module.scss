@@ -1,75 +1,157 @@
-.sidebarWrapper {
-  background: linear-gradient(
-      135deg,
-      rgba(25, 25, 25, 0.9) 0%,
-      rgba(50, 20, 20, 0.9) 100%
-    ),
-    url("https://images.unsplash.com/photo-1560977501-7cb367eccebe?ixlib=rb-4.0.3&w=1080"); /* Традиционный японский интерьер */
-  background-blend-mode: overlay;
-  backdrop-filter: blur(6px);
-  background-size: cover;
-  background-position: center;
-  color: var(--primary-white);
-  padding: 80px 25px 25px;
-  width: 350px;
+.sidebar {
   position: relative;
-  border-right: 2px solid var(--primary-red);
-  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.4);
+  background-color: teal;
+  margin-left: 50px;
+  color: #fff;
+  padding: 77px 30px 25px 30px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background: linear-gradient(
-      to bottom,
-      rgba(193, 42, 42, 0.3) 0%,
-      transparent 100%
-    );
-    z-index: 1;
+  // Фото
+  &__photo {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+    &-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 120px;
-    height: 120px;
-    background: url("https://images.unsplash.com/photo-1558021212-51b6ecfa0db6?ixlib=rb-4.0.3&w=200")
-      no-repeat; /* Красные японские узоры */
-    background-size: contain;
-    opacity: 0.07;
-    z-index: 0;
-    filter: sepia(100%) saturate(300%) hue-rotate(5deg);
+  // Общие секции: summary, skills, contacts, languages
+  &__section {
+    margin-bottom: 30px;
+
+    &-title {
+      background-color: hsla(0, 0%, 100%, 0.15);
+      color: #fff;
+      padding: 8px 15px;
+      margin-bottom: 15px;
+      font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
+      font-weight: 600;
+      border-radius: 3px;
+    }
+
+    &-list {
+      padding-left: 20px;
+      list-style: disc;
+
+      &-item {
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+    }
+
+    &--languages {
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+    }
+  }
+
+  // Контакты
+  &__contact {
+    margin-bottom: 30px;
+
+    &-item {
+      margin-bottom: 15px;
+    }
+
+    &-label {
+      font-size: 0.9em;
+      font-weight: 600;
+      margin-bottom: 3px;
+      opacity: 0.8;
+    }
+
+    &-info {
+      font-size: 1em;
+      font-style: normal;
+      line-height: 1.3;
+    }
+
+    &-link {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        color: #ddd;
+      }
+    }
+  }
+
+  // Образование
+  &__education {
+    &-item {
+      margin-bottom: 15px;
+
+      .degree {
+        font-weight: 600;
+        font-size: 1.05em;
+        margin-bottom: 4px;
+        line-height: 1.3;
+      }
+
+      .university,
+      .dates,
+      .gpa {
+        margin-bottom: 4px;
+        line-height: 1.3;
+      }
+
+      .dates {
+        font-size: 0.9em;
+        margin-bottom: 5px;
+      }
+    }
   }
 }
-
-.sidebarContent {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+.contactContainer {
+  margin-bottom: 30px;
 }
 
-.skillsTitle {
-  font-family: "Ma Shan Zheng", cursive;
-  font-size: 22px;
-  letter-spacing: 2px;
-  color: var(--primary-red);
-  position: relative;
-  display: inline-block;
+.contactsTitel {
+  background-color: hsla(0, 0%, 100%, 0.15);
+  color: #fff;
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
+  font-weight: 600;
+  border-radius: 3px;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, var(--primary-red), transparent 80%);
-  }
+.contactsItem {
+  margin-bottom: 15px;
+}
+
+.contactsTitle {
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-bottom: 3px;
+  opacity: 0.8;
+}
+
+.contactsLinks {
+  font-size: 1em;
+  font-style: normal;
+  line-height: 1.3;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contactsLinks:hover {
+  color: #ddd;
 }

@@ -1,89 +1,74 @@
-import React, { useEffect, useState } from "react";
 import {
-  MyProjects,
-  ProjName,
-  MyProjectsList,
-  ProjectItem,
-  ProjectItemTitle,
-  ProjectItemTech,
-  ProjectDetails,
-} from "./MyProjects.styled";
-import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
+  WordExperienceContainer,
+  WorkExperienH4,
+  WorkExperienTime,
+  WorkExperionseSeparator,
+  WorkExperionseList,
+  WorkExperionseItems,
+  MyProjectsContainerName,
+  MyProjectsContainer,
+} from "../WorkExperience/WorkExperience.module";
 
-/**
- * Тип описания проекта
- */
-export interface IProject {
-  title: string;
-  details: string[];
-  tech: string;
-}
 
-/**
- * Поток с проектами (RxJS BehaviorSubject для реактивного обновления)
- */
-const projects$ = new BehaviorSubject<IProject[]>([
-  {
-    title: "Meal Planner Pro",
-    details: ["Calorie tracker with customizable meals and diet types."],
-    tech: "React, Hooks, Firebase, Bootstrap, Chart.js",
-  },
-  {
-    title: "RealEstateHub",
-    details: ["Property listing platform with filters and mock backend."],
-    tech: "React, SCSS, REST API",
-  },
-  {
-    title: "StudyMate",
-    details: ["Digital learning tracker with task/module management."],
-    tech: "React, MUI, localStorage",
-  },
-  {
-    title: "CryptoCompare",
-    details: ["Live crypto rates with interactive charts."],
-    tech: "React, REST API, CSS Modules",
-  },
-  {
-    title: "Taxi — Smart Car Rental System",
-    details: ["Secure platform with AI recommendations and Stripe payments."],
-    tech: "PHP, JavaScript, MySQL, Docker",
-  },
-]);
+const Experience = () => (
+  <>
+    <MyProjectsContainer>
+      <MyProjectsContainerName>Experience</MyProjectsContainerName>
+      <WordExperienceContainer>
+        <WorkExperienH4>
+          Front-End Developer (Personal Projects & Freelance)
+        </WorkExperienH4>
+        <WorkExperienTime>
+          Jan 2024 – Present
+          <WorkExperionseSeparator>|</WorkExperionseSeparator> Remote
+        </WorkExperienTime>
+        <WorkExperionseList>
+          <WorkExperionseItems>
+            Developed 4 React applications with Firebase, APIs, and responsive
+            design. Key projects: Meal Planner Pro, RealEstateHub (details in
+            Projects).
+          </WorkExperionseItems>
+        </WorkExperionseList>
+      </WordExperienceContainer>
+    </MyProjectsContainer>
+    <MyProjectsContainer>
+      <WordExperienceContainer>
+        <WorkExperienH4>
+          Web Developer (Project Owner) | FoodCase Catering — Kraków, Poland
+        </WorkExperienH4>
+        <WorkExperienTime>
+          Feb 2023 – Dec 2023
+          <WorkExperionseSeparator>|</WorkExperionseSeparator> Remote
+        </WorkExperienTime>
+        <WorkExperionseList>
+          <WorkExperionseItems>
+            Full-cycle development of a smart catering system: UI/UX, admin
+            dashboard, secure authentication. Built order/payment system with
+            Stripe, Google OAuth, and MySQL. Implemented AI-powered menu
+            generation and real-time analytics.
+          </WorkExperionseItems>
+        </WorkExperionseList>
+      </WordExperienceContainer>
+    </MyProjectsContainer>
+    <MyProjectsContainer>
+      <WordExperienceContainer>
+        <WorkExperienH4>
+          Junior JavaScript Developer (Internship)
+        </WorkExperienH4>
+        <WorkExperienTime>
+          Feb 2022 – Mar 2022
+          <WorkExperionseSeparator>|</WorkExperionseSeparator> Remote
+        </WorkExperienTime>
+        <WorkExperionseList>
+          <WorkExperionseItems>
+            Developed e-commerce platforms with Stripe and Telegram API
+            integrations.
+          </WorkExperionseItems>
+        </WorkExperionseList>
+      </WordExperienceContainer>
+    </MyProjectsContainer>
+    
+  </>
+);
 
-/**
- * React компонент для отображения списка проектов
- * @returns JSX.Element
- */
-const Projects: React.FC = () => {
-  const [projects, setProjects] = useState<IProject[]>([]);
-
-  useEffect(() => {
-    const subscription = projects$.subscribe(setProjects);
-    return () => subscription.unsubscribe();
-  }, []);
-
-  return (
-    <MyProjects role="region" aria-labelledby="projects-heading">
-      <ProjName id="projects-heading">Sample Projects</ProjName>
-      <MyProjectsList>
-        {projects.map(({ title, details, tech }, idx) => (
-          <ProjectItem key={idx} tabIndex={0}>
-            <ProjectItemTitle title={`Project: ${title}`}>
-              {title}
-            </ProjectItemTitle>
-            <ProjectDetails>
-              {details.map((desc, i) => (
-                <li key={i}>{desc}</li>
-              ))}
-              <li>
-                <ProjectItemTech>Tech: {tech}</ProjectItemTech>
-              </li>
-            </ProjectDetails>
-          </ProjectItem>
-        ))}
-      </MyProjectsList>
-    </MyProjects>
-  );
-};
-
-export default Projects;
+export default Experience;
