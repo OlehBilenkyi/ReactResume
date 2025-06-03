@@ -1,10 +1,11 @@
 import MainContent from "./components/MainContent/MainContent";
 import MySidebar from "./components/Sidebar/Sidebar";
 import NameSection from "./components/MainContent/NameSection/NameSection";
+
 function App() {
   return (
     <>
-      <MySidebar avatar="/avatar.jpg" />
+      <MySidebar />
       <NameSection name="ELENA PETROVA" title="Frontend Developer" />
       <MainContent
         profession="Junior Web Developer"

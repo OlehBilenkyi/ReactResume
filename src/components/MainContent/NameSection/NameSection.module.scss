@@ -4,8 +4,9 @@
   color: #fff;
   padding: 30px 40px;
   text-align: center;
-  width: 100%;
+  width: 90.5%;
   top: 105px;
+  z-index: 1; /* Выше sidebar */
 
   .name {
     margin: 0 0 5px 107px;
@@ -19,5 +20,28 @@
     font-size: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
     font-weight: 400;
     letter-spacing: 1px;
+  }
+}
+/* Адаптивность */
+@media (max-width: 992px) {
+  .nameSection {
+    padding: 20px 30px;
+    top: 80px;
+
+    .name {
+      margin: 0 0 5px 80px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nameSection {
+    position: static;
+    padding: 20px 15px;
+
+    .name {
+      margin: 0 0 5px 0;
+      text-align: center;
+    }
   }
 }

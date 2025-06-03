@@ -1,9 +1,9 @@
-import styles from "../ContactsLanguagesSummaryTechSkills.module.scss";
+import styles from "./TechSkills.module.scss";
 
 const TechSkills = () => (
   <div className={styles.skillsContainer}>
     <h3 className={styles.skillsTitle}>Tech Stack</h3>
-    <h4 className={styles.skillsList}>
+    <div className={styles.skillsList}>
       <p className={styles.skillsListItem}>
         <strong>Languages & Libraries:</strong> HTML5, CSS3, JavaScript (ES6+),
         React (Hooks, Router), Bootstrap, SASS, TypeScript (basic), Redux
@@ -22,7 +22,7 @@ const TechSkills = () => (
         <strong>Soft Skills:</strong> Teamwork, communication, adaptability,
         self-motivation, time management
       </p>
-    </h4>
+    </div>
   </div>
 );
 

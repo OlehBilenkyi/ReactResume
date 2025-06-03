@@ -1,0 +1,26 @@
+.photoWrapper {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.photoLink {
+  display: block;
+  width: 300px; // Фиксированная ширина для аватара
+  height: 300px; // Фиксированная высота для аватара
+  //   border-radius: 2px; // Круглая форма
+  overflow: hidden;
+  //   border: 4px solid #2dbdbd; // Цветная рамка
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Тень
+}
+
+.photoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
