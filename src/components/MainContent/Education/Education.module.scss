@@ -1,45 +1,80 @@
 /* Education.module.scss */
+$primary-color: #066;
+$secondary-color: #5ce3e3;
+$text-color: #fff;
+$muted-text: #ccc;
 
 .educationContainer {
   margin-bottom: 15px;
+
+  ul {
+    padding-left: 20px;
+    list-style: disc;
+    transition: all 0.3s ease;
+  }
+
+  li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: $muted-text;
+    padding: 3px 0;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+
+    ul {
+      padding-left: 15px;
+    }
+
+    li {
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    li {
+      font-size: 11px;
+    }
+  }
 }
 
 .educationTitle {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #fff;
-  background-color: #066;
+  color: $text-color;
+  background-color: $primary-color;
   padding: 8px 15px;
   border-radius: 3px;
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
 }
 
 .nameEducation {
   font-weight: 600;
   font-size: 16px;
-  color: #5ce3e3;
+  color: $secondary-color;
   margin-bottom: 4px;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 }
 
 .educationDip {
   font-size: 14px;
-  color: #fff;
+  color: $text-color;
   margin-bottom: 3px;
 }
 
 .workExperienceTime {
   font-size: 12px;
-  color: #ccc;
+  color: $muted-text;
   margin-bottom: 10px;
-}
-
-.educationContainer ul {
-  padding-left: 20px;
-  list-style: disc;
-}
-
-.educationContainer li {
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #ccc;
 }

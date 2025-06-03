@@ -3,7 +3,7 @@ import styles from "./NameSection.module.scss";
 
 interface NameSectionProps {
   name: string;
-  title?: string; // опциональный параметр
+  title?: string;
 }
 
 const NameSection: React.FC<NameSectionProps> = ({ name, title }) => {

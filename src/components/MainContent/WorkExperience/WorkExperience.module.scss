@@ -1,12 +1,14 @@
-import styled from "styled-components";
+/* WorkExperience.module.scss */
 
-// Container for the entire experience section
-export const ExperienceContainer = styled.div`
+.experienceContainer {
   margin-bottom: 30px;
-`;
 
-// Title for the experience section
-export const ExperienceTitle = styled.h2`
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.experienceTitle {
   background-color: #066;
   color: #fff;
   padding: 8px 15px;
@@ -14,10 +16,9 @@ export const ExperienceTitle = styled.h2`
   font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
   font-weight: 600;
   border-radius: 3px;
-`;
+}
 
-// Container for each experience item
-export const ExperienceItem = styled.div`
+.experienceItem {
   display: flex;
   position: relative;
   margin-bottom: 25px;
@@ -26,19 +27,21 @@ export const ExperienceItem = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
-`;
 
-// Timeline styling
-export const Timeline = styled.div`
+  @media (max-width: 768px) {
+    padding-left: 15px;
+  }
+}
+
+.timeline {
   position: absolute;
   left: 0;
   top: 5px;
   height: 100%;
   width: 2px;
-`;
+}
 
-// Timeline dot styling
-export const TimelineDot = styled.span`
+.timelineDot {
   position: absolute;
   left: -5px;
   top: 0;
@@ -47,53 +50,63 @@ export const TimelineDot = styled.span`
   background-color: teal;
   border-radius: 50%;
   border: 2px solid #f4f4f4;
-`;
+}
 
-// Timeline line styling
-export const TimelineLine = styled.span`
+.timelineLine {
   position: absolute;
   left: 0;
   top: 12px;
   bottom: -10px;
   width: 2px;
   background-color: #ccc;
-`;
+}
 
-// Content container for each experience item
-export const ExperienceContent = styled.div`
+.experienceContent {
   flex-grow: 1;
-`;
+}
 
-// Dates styling
-export const Dates = styled.p`
+.dates {
   font-size: 0.9em;
   margin-bottom: 5px;
-`;
 
-// Company name styling
-export const Company = styled.h3`
+  @media (max-width: 768px) {
+    font-size: 0.8em;
+  }
+}
+
+.company {
   font-weight: 600;
   font-size: 1.1em;
   margin-bottom: 3px;
-`;
 
-// Job title styling
-export const JobTitle = styled.h4`
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
+}
+
+.jobTitle {
   font-weight: 500;
   font-style: italic;
   margin-bottom: 8px;
   color: #555;
-`;
+}
 
-// List styling
-export const DetailsList = styled.ul`
+.detailsList {
   padding-left: 18px;
   list-style: disc;
   color: #444;
-`;
 
-// List item styling
-export const ListItem = styled.li`
+  @media (max-width: 768px) {
+    padding-left: 10px;
+  }
+}
+
+.listItem {
   margin-bottom: 8px;
   line-height: 1.4;
-`;
+
+  @media (max-width: 768px) {
+    margin-bottom: 5px;
+    line-height: 1.2;
+  }
+}

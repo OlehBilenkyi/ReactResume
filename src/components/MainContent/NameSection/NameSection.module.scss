@@ -6,7 +6,7 @@
   text-align: center;
   width: 100%;
   top: 105px;
-  z-index: 1; /* Выше sidebar */
+  z-index: 1;
 
   .name {
     margin: 0 0 5px 107px;
@@ -21,27 +21,32 @@
     font-weight: 400;
     letter-spacing: 1px;
   }
-}
-/* Адаптивность */
-@media (max-width: 992px) {
-  .nameSection {
+
+  /* Планшеты и небольшие экраны */
+  @media (max-width: 992px) {
     padding: 20px 30px;
     top: 80px;
 
     .name {
       margin: 0 0 5px 80px;
+      font-size: clamp(1.8rem, 1.3rem + 1.2vw, 2.5rem);
     }
   }
-}
 
-@media (max-width: 768px) {
-  .nameSection {
+  /* Мобильные устройства */
+  @media (max-width: 768px) {
     position: static;
     padding: 20px 15px;
+    width: auto;
 
     .name {
       margin: 0 0 5px 0;
       text-align: center;
+      font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+    }
+
+    .title {
+      font-size: clamp(0.9rem, 0.7rem + 0.8vw, 1.2rem);
     }
   }
 }

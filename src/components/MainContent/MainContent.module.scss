@@ -1,7 +1,28 @@
+/* MainContent.module.scss */
 .mainContent {
-  background-color: #f4f4f4;
-  color: #333;
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --accent-color: #066;
+  --timeline-color: #ccc;
+  --secondary-text: #555;
+  --dot-color: teal;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
   padding: 382px 30px 30px 30px;
+  transition: all 0.3s ease;
+
+  @media (max-width: 992px) {
+    padding: 300px 25px 25px 25px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 250px 20px 20px 20px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 200px 15px 15px 15px;
+  }
 
   &__section {
     margin-bottom: 30px;
@@ -11,7 +32,7 @@
     }
 
     &Title {
-      background-color: #066;
+      background-color: var(--accent-color);
       color: #fff;
       padding: 8px 15px;
       margin-bottom: 15px;
@@ -35,14 +56,20 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    @media (max-width: 768px) {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   &__timeline {
     position: absolute;
     left: 0;
     top: 5px;
-    height: 100%;
+    height: calc(100% - 10px);
     width: 2px;
+    background-color: var(--timeline-color);
   }
 
   &__timelineDot {
@@ -51,18 +78,10 @@
     top: 0;
     width: 12px;
     height: 12px;
-    background-color: teal;
+    background-color: var(--dot-color);
     border-radius: 50%;
-    border: 2px solid #f4f4f4;
-  }
-
-  &__timelineLine {
-    position: absolute;
-    left: 0;
-    top: 12px;
-    bottom: -10px;
-    width: 2px;
-    background-color: #ccc;
+    border: 2px solid var(--bg-color);
+    z-index: 1;
   }
 
   &__experienceContent {
@@ -71,7 +90,7 @@
 
   &__company {
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: clamp(1rem, 0.9rem + 0.3vw, 1.1rem);
     margin-bottom: 3px;
   }
 
@@ -79,29 +98,41 @@
     font-weight: 500;
     font-style: italic;
     margin-bottom: 8px;
-    color: #555;
+    color: var(--secondary-text);
+    font-size: clamp(0.9rem, 0.8rem + 0.3vw, 1rem);
   }
 
   &__dates {
     font-size: 0.9em;
     margin-bottom: 5px;
+    color: var(--secondary-text);
   }
 
   &__list {
     padding-left: 18px;
     list-style: disc;
     color: #444;
+
+    @media (max-width: 768px) {
+      padding-left: 15px;
+    }
   }
 
   &__listItem {
     margin-bottom: 8px;
     line-height: 1.4;
+    font-size: clamp(0.9rem, 0.8rem + 0.3vw, 1rem);
   }
 
   &__referencesWrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
   }
 
   &__referenceItem {
@@ -116,24 +147,38 @@
 
   &__referenceDetails {
     font-size: 0.95em;
-    color: #555;
+    color: var(--secondary-text);
     margin-bottom: 3px;
   }
 
   &__qrcode {
     max-width: 140px;
     margin-left: auto;
+
+    @media (max-width: 768px) {
+      max-width: 120px;
+    }
+
+    @media (max-width: 576px) {
+      max-width: 100px;
+    }
   }
 
   &__qrcodeLink {
     display: block;
     width: 100%;
     height: 100%;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   &__qrcodeImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 8px;
   }
 }

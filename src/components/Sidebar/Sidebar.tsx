@@ -5,13 +5,6 @@ import TechSkills from "./TechSkills/TechSkills";
 import Avatar from "./Avatar/Avatar";
 import styles from "./Sidebar.module.scss";
 
-const sectionTitles = {
-  summary: "Professional Summary",
-  skills: "Technical Skills",
-  languages: "Languages",
-  contacts: "Contact Info",
-};
-
 const MySidebar: React.FC = () => {
   return (
     <aside className={styles.sidebar}>
@@ -20,16 +13,22 @@ const MySidebar: React.FC = () => {
       </div>
 
       <div className={styles.sidebar__section}>
-        <h3 className="sectionTitle">{sectionTitles.summary}</h3>
+        <h3 className={styles.sectionTitle}>Professional Summary</h3>
         <Summary />
+      </div>
 
-        <h3 className="sectionTitle">{sectionTitles.skills}</h3>
+      <div className={styles.sidebar__section}>
+        <h3 className={styles.sectionTitle}>Technical Skills</h3>
         <TechSkills />
+      </div>
 
-        <h3 className="sectionTitle">{sectionTitles.languages}</h3>
+      <div className={styles.sidebar__section}>
+        <h3 className={styles.sectionTitle}>Languages</h3>
         <Languages />
+      </div>
 
-        <h3 className="sectionTitle">{sectionTitles.contacts}</h3>
+      <div className={styles.sidebar__section}>
+        <h3 className={styles.sectionTitle}>Contacts</h3>
         <Contacts />
       </div>
     </aside>
