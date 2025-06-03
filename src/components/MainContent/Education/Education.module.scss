@@ -1,32 +1,33 @@
-import styled from "styled-components";
+/* Education.module.scss */
 
-export const EducationContainer = styled.div`
+.educationContainer {
   margin-bottom: 20px;
-`;
+}
 
-export const EducationTitle = styled.h4`
+.educationTitle {
   font-weight: 700;
   font-size: 24px;
-  color: #000;
+  color: #000000;
   margin-bottom: 10px;
-`;
+}
 
-export const NameEducation = styled.h5`
+.nameEducation {
   font-weight: 700;
   font-size: 18px;
   color: #6d9bf5;
   margin-bottom: 5px;
-`;
+}
 
-export const EducationDip = styled.p`
+.educationDip {
   font-weight: 700;
   font-size: 16px;
-  color: #000;
+  color: #000000;
   margin-bottom: 5px;
-`;
-export const WorkExperienceTime = styled.p`
+}
+
+.workExperienceTime {
   font-weight: 400;
   font-size: 14px;
   color: #a8a8a8;
   margin-bottom: 10px;
-`;
+}

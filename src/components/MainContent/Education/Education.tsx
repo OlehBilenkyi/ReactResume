@@ -1,44 +1,43 @@
-import {
-  EducationContainer,
-  EducationTitle,
-  NameEducation,
-  EducationDip,
-  WorkExperienceTime,
-} from "./Education.module";
+import React from "react";
+import styles from "./Education.module.scss";
 
-const MyEducation = () => {
+const MyEducation: React.FC = () => {
   return (
     <>
-      <EducationContainer>
-        <EducationTitle>Self-Taught Frontend Development</EducationTitle>
-        <EducationDip>
+      <div className={styles.educationContainer}>
+        <h4 className={styles.educationTitle}>
+          Self-Taught Frontend Development
+        </h4>
+        <p className={styles.educationDip}>
           Resources: YouTube (GO-IT, Net Ninja), JavaScript.info, freeCodeCamp,
           ChatGPT.
-        </EducationDip>
-        <p className="work-experien-time">2022 - Present</p>
-        <ul className="work-experionse-list">
-          <li className="work-experionse-items">
-            Focused on HTML, CSS,JavaScript (ES6+), React fundamentals
-          </li>
-          <li className="work-experionse-items">
-            Completed projects in both frontend development
-          </li>
+        </p>
+        <p className={styles.workExperienceTime}>2022 - Present</p>
+        <ul>
+          <li>Focused on HTML, CSS, JavaScript (ES6+), React fundamentals</li>
+          <li>Completed projects in both frontend development</li>
         </ul>
-      </EducationContainer>
-      <EducationContainer>
-        <EducationTitle>Education</EducationTitle>
-        <NameEducation>
-          <a href="https://nuos.edu.ua/" target="_blank">
+      </div>
+
+      <div className={styles.educationContainer}>
+        <h4 className={styles.educationTitle}>Education</h4>
+        <h5 className={styles.nameEducation}>
+          <a
+            href="https://nuos.edu.ua/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Admiral Makarov National University of Shipbuilding, Mykolaiv,
             Ukraine
           </a>
-        </NameEducation>
-        <EducationDip>
+        </h5>
+        <p className={styles.educationDip}>
           Master’s Degree (with Honors), Electrical Engineering
-        </EducationDip>
-        <WorkExperienceTime>September 2010 – June 2018</WorkExperienceTime>
-      </EducationContainer>
+        </p>
+        <p className={styles.workExperienceTime}>September 2010 – June 2018</p>
+      </div>
     </>
   );
 };
+
 export default MyEducation;
