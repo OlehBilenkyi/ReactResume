@@ -8,24 +8,7 @@
   top: 105px;
   z-index: 1;
 
-  .name {
-    margin: 0 0 5px 107px;
-    font-size: clamp(2rem, 1.5rem + 1.5vw, 3rem);
-    font-weight: 700;
-    letter-spacing: 2px;
-  }
-
-  .title {
-    margin: 0;
-    font-size: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
-    font-weight: 400;
-    letter-spacing: 1px;
-  }
-}
-
-/* Планшеты и небольшие экраны */
-@media (max-width: 992px) {
-  .nameSection {
+  @media (max-width: 992px) {
     padding: 20px 30px;
     top: 80px;
 
@@ -34,11 +17,8 @@
       font-size: clamp(1.8rem, 1.3rem + 1.2vw, 2.5rem);
     }
   }
-}
 
-/* Мобильные устройства */
-@media (max-width: 768px) {
-  .nameSection {
+  @media (max-width: 768px) {
     position: static;
     padding: 20px 15px;
     width: auto;
@@ -52,5 +32,19 @@
     .title {
       font-size: clamp(0.9rem, 0.7rem + 0.8vw, 1.2rem);
     }
+  }
+
+  .name {
+    margin: 0 0 5px 107px;
+    font-size: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .title {
+    margin: 0;
+    font-size: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: 1px;
   }
 }

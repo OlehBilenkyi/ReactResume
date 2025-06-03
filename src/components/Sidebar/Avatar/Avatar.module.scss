@@ -1,8 +1,11 @@
-/* Avatar.module.scss */
 .photoWrapper {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
 }
 
 .photoLink {

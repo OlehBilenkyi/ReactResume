@@ -1,5 +1,13 @@
 .infoContainer {
   margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 20px;
+  }
 }
 
 .profession {
@@ -7,6 +15,10 @@
   font-size: 18px;
   color: #000;
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 .name {
@@ -14,5 +26,12 @@
   font-size: 32px;
   color: #000;
   margin-bottom: 15px;
-}
 
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
+}

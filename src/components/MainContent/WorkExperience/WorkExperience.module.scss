@@ -1,5 +1,3 @@
-/* WorkExperience.module.scss */
-
 .experienceContainer {
   margin-bottom: 30px;
 
@@ -24,12 +22,12 @@
   margin-bottom: 25px;
   padding-left: 25px;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   @media (max-width: 768px) {
     padding-left: 15px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 

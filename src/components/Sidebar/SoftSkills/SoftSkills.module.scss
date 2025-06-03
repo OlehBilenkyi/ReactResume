@@ -1,5 +1,9 @@
 .skillsContainer {
   margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
 }
 
 .skillsTitle {
@@ -16,9 +20,17 @@
   padding-left: 20px;
   margin-bottom: 8px;
   line-height: 1.4;
+
+  @media (max-width: 768px) {
+    padding-left: 15px;
+  }
 }
 
 .skillsListItem {
   margin-bottom: 8px;
   line-height: 1.4;
+
+  @media (max-width: 768px) {
+    margin-bottom: 5px;
+  }
 }
