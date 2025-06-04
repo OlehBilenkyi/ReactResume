@@ -11,7 +11,7 @@ const Avatar: React.FC = () => {
         rel="noopener noreferrer"
       >
         <img
-          src="/avatar.jpg" 
+          src="/avatar.jpg"
           alt="User avatar"
           className={styles.photoImage}
           loading="lazy"
