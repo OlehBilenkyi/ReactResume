@@ -2,7 +2,6 @@ import styles from "./TechSkills.module.scss";
 
 const TechSkills = () => (
   <div className={styles.skillsContainer}>
-    <h3 className={styles.skillsTitle}>Tech Stack</h3>
     <div className={styles.skillsList}>
       <p className={styles.skillsListItem}>
         <strong>Languages & Libraries:</strong> HTML5, CSS3, JavaScript (ES6+),

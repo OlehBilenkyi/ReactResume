@@ -13,7 +13,7 @@ const MySidebar: React.FC = () => {
       </div>
 
       <div className={styles.sidebar__section}>
-        <h3 className={styles.sectionTitle}>Professional Summary</h3>
+        <h3 className={styles.sectionTitle}>Summary</h3>
         <Summary />
       </div>
 

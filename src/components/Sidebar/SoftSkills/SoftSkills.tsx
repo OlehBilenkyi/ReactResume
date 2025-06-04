@@ -2,7 +2,7 @@ import styles from "./SoftSkills.module.scss";
 
 const SoftSkills = () => (
   <div className={styles.skillsContainer}>
-    <h3 className={styles.skillsTitle}>Summary</h3>
+    
     <div className={styles.skillsList}>
       <p className={styles.skillsListItem}>
         Junior Front-End Developer with hands-on experience in React,
