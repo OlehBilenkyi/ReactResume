@@ -1,3 +1,4 @@
+// MainContent.tsx
 import MyInfo from "./MyInfo/MyInfo";
 import Projects from "./MyProjects/MyProjects";
 import Experience from "./WorkExperience/WorkExperience";
@@ -16,21 +17,22 @@ const MainContent: React.FC<MainContentProps> = ({
   description,
 }) => (
   <div className={styles.mainContent}>
-    {/* Apply other style classes as needed */}
-    <div className={styles.mainContent__section}>
-      <h2 className={styles.mainContent__sectionTitle}>About Me</h2>
-      <p className={styles.mainContent__paragraph}>{description}</p>
-    </div>
-    <div className={styles.mainContent__body}>
-      <div className={styles.section}>
+    <MyInfo 
+      profession={profession} 
+      name={name} 
+      description={description} 
+    />
+    
+    <div className={styles.contentSections}>
+      <section className={styles.section}>
         <Experience />
-      </div>
-      <div className={styles.section}>
+      </section>
+      <section className={styles.section}>
         <Projects />
-      </div>
-      <div className={styles.section}>
+      </section>
+      <section className={styles.section}>
         <MyEducation />
-      </div>
+      </section>
     </div>
   </div>
 );

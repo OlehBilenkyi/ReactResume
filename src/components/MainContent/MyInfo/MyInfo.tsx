@@ -1,3 +1,4 @@
+// MyInfo.tsx
 import React from "react";
 import styles from "./MyInfo.module.scss";
 
