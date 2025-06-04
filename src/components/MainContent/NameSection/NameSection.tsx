@@ -29,7 +29,9 @@ const NameSection: React.FC<NameSectionProps> = ({
 
   return (
     <section
-      className={`${styles.nameSection} ${isScrolled ? styles.scrolled : ""}`}
+      className={`${styles.nameSection} ${
+        isScrolled ? styles.scrolled : styles.initial
+      }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

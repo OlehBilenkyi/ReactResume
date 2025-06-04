@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap");
 
 .nameSection {
-  top: 10px; // отступ в 40px от верха
-  position: relative;
+  top: 0;
+  position: fixed;
+  transition: transform 0.6s ease, padding 0.6s ease;
   height: 20vh;
   --primary-color: 45, 189, 189; // RGB values for #2dbdbd
   --secondary-color: 32, 139, 139; // RGB values for #208b8b
@@ -197,6 +198,13 @@
     animation: fadeUp 0.5s forwards;
   }
 
+  &.initial {
+    transform: translateY(40px); // 👈 начальный отступ сверху
+  }
+
+  &.scrolled {
+    transform: translateY(0); // 👈 прилипание к верху
+  }
   @keyframes fadeUp {
     to {
       opacity: 1;
