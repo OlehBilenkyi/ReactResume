@@ -1,40 +1,35 @@
 // MainContent.tsx
-import MyInfo from "./MyInfo/MyInfo";
-import Projects from "./MyProjects/MyProjects";
-import Experience from "./WorkExperience/WorkExperience";
+import React from "react";
 import styles from "./MainContent.module.scss";
-import MyEducation from "./Education/Education";
+import Experience from "./WorkExperience/WorkExperience";
+import Projects from "./MyProjects/MyProjects";
+import Education from "./Education/Education";
+import MyInfo from "./MyInfo/MyInfo";
 
-type MainContentProps = {
-  profession: string;
-  name: string;
+interface MainContentProps {
   description: string;
-};
+}
 
-const MainContent: React.FC<MainContentProps> = ({
-  profession,
-  name,
-  description,
-}) => (
-  <div className={styles.mainContent}>
-    <MyInfo 
-      profession={profession} 
-      name={name} 
-      description={description} 
-    />
-    
+const MainContent: React.FC<MainContentProps> = ({ description }) => (
+  <main className={styles.mainContent}>
     <div className={styles.contentSections}>
+      <section className={styles.section}>
+        <MyInfo description={description} />
+      </section>
+
       <section className={styles.section}>
         <Experience />
       </section>
+
       <section className={styles.section}>
         <Projects />
       </section>
+
       <section className={styles.section}>
-        <MyEducation />
+        <Education />
       </section>
     </div>
-  </div>
+  </main>
 );
 
 export default MainContent;

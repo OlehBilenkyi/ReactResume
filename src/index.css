@@ -11,7 +11,7 @@ body {
   color: #333;
   background-color: #f9f9f9;
   font-family: "Montserrat", sans-serif;
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 10px;
   font-family: var(--font-primary);
@@ -43,6 +43,15 @@ h4 {
 
   /* Моноширинный для кода/технических деталей */
   --font-mono: "Roboto Mono", monospace;
+}
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 100vh;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 /* Основной контейнер приложения */
 .app {

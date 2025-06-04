@@ -1,38 +1,40 @@
+// Sidebar.tsx
+import React from "react";
+import styles from "./Sidebar.module.scss";
 import Contacts from "./Contacts/Contacts";
 import Languages from "./Languages/Languages";
-import Summary from "./SoftSkills/SoftSkills";
+import Skills from "./SoftSkills/SoftSkills";
 import TechSkills from "./TechSkills/TechSkills";
 import Avatar from "./Avatar/Avatar";
-import styles from "./Sidebar.module.scss";
 
-const MySidebar: React.FC = () => {
+const Sidebar: React.FC = () => {
   return (
     <aside className={styles.sidebar}>
-      <div className={styles.sidebar__photo}>
+      <div className={styles.avatarContainer}>
         <Avatar />
       </div>
 
-      <div className={styles.sidebar__section}>
-        <h3 className={styles.sectionTitle}>Summary</h3>
-        <Summary />
+      <div className={styles.section}>
+        <h3 className={styles.sectionTitle}>Contacts</h3>
+        <Contacts />
       </div>
 
-      <div className={styles.sidebar__section}>
+      <div className={styles.section}>
         <h3 className={styles.sectionTitle}>Technical Skills</h3>
         <TechSkills />
       </div>
 
-      <div className={styles.sidebar__section}>
-        <h3 className={styles.sectionTitle}>Languages</h3>
-        <Languages />
+      <div className={styles.section}>
+        <h3 className={styles.sectionTitle}>Skills</h3>
+        <Skills />
       </div>
 
-      <div className={styles.sidebar__section}>
-        <h3 className={styles.sectionTitle}>Contacts</h3>
-        <Contacts />
+      <div className={styles.section}>
+        <h3 className={styles.sectionTitle}>Languages</h3>
+        <Languages />
       </div>
     </aside>
   );
 };
 
-export default MySidebar;
+export default Sidebar;
