@@ -14,6 +14,7 @@
   height: 300px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 
   @media (max-width: 768px) {
     width: 200px;
@@ -30,4 +31,10 @@
   &:hover {
     transform: scale(1.1);
   }
+}
+
+.modalImage {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 4px;
 }
