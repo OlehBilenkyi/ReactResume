@@ -1,10 +1,13 @@
 import styles from "./SoftSkills.module.scss";
 
 const SoftSkills = () => (
-  <div className={styles.skillsContainer}>
-    
-    <div className={styles.skillsList}>
-      <p className={styles.skillsListItem}>
+  <section
+    className={styles.softSkillsContainer}
+    aria-label="Soft skills description"
+  >
+    {/* <h2 className={styles.softSkillsTitle}>Soft Skills</h2> */}
+    <div className={styles.softSkillsContent}>
+      <p>
         Junior Front-End Developer with hands-on experience in React,
         JavaScript, and responsive design. Built 5+ applications with Firebase,
         REST APIs, and modern UI libraries. Passionate about clean code and
@@ -12,7 +15,7 @@ const SoftSkills = () => (
         team.
       </p>
     </div>
-  </div>
+  </section>
 );
 
 export default SoftSkills;

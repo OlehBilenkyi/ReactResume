@@ -1,28 +1,75 @@
+// TechSkills.tsx (React + TypeScript)
+
+import { useState, useEffect } from "react";
 import styles from "./TechSkills.module.scss";
 
-const TechSkills = () => (
-  <div className={styles.skillsContainer}>
-    <div className={styles.skillsList}>
-      <p className={styles.skillsListItem}>
-        <strong>Languages & Libraries:</strong> HTML5, CSS3, JavaScript (ES6+),
-        React (Hooks, Router), Bootstrap, SASS, TypeScript (basic), Redux
-      </p>
-      <p className={styles.skillsListItem}>
-        <strong>Tools:</strong> Git, GitHub, Webpack, Vite, Figma, Trello,
-        Chrome DevTools
-      </p>
-      <p className={styles.skillsListItem}>
-        <strong>APIs & Backend:</strong> REST API, PHP (basic), MySQL (basic)
-      </p>
-      <p className={styles.skillsListItem}>
-        <strong>UI Frameworks:</strong> Material UI (MUI), Bootstrap
-      </p>
-      <p className={styles.skillsListItem}>
-        <strong>Soft Skills:</strong> Teamwork, communication, adaptability,
-        self-motivation, time management
-      </p>
+const techSkills: Record<string, string[]> = {
+  Languages: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript (basic)"],
+  Frameworks: ["React (Hooks, Router)", "Redux", "SASS", "Bootstrap", "MUI"],
+  Tools: ["Git", "GitHub", "Webpack", "Vite", "Figma", "Trello", "DevTools"],
+  Backend: ["REST API", "PHP (basic)", "MySQL (basic)"],
+  Soft: ["Teamwork", "Adaptability", "Self-motivation", "Time management"],
+};
+
+const TechSkills: React.FC = () => {
+  const categories = Object.keys(techSkills);
+  const [activeCategory, setActiveCategory] = useState<string>(categories[0]);
+  const [fade, setFade] = useState<boolean>(false);
+
+  // Анимация затухания при смене таба
+  useEffect(() => {
+    setFade(true);
+    const timer = setTimeout(() => setFade(false), 350);
+    return () => clearTimeout(timer);
+  }, [activeCategory]);
+
+  return (
+    <div className={styles.techSkillsContainer}>
+      <div
+        className={styles.tabs}
+        role="tablist"
+        aria-label="Tech skills categories"
+      >
+        {categories.map((category) => (
+          <button
+            key={category}
+            type="button"
+            role="tab"
+            aria-selected={activeCategory === category}
+            aria-controls={`panel-${category}`}
+            id={`tab-${category}`}
+            className={`${styles.tabButton} ${
+              activeCategory === category ? styles.active : ""
+            }`}
+            onClick={() => setActiveCategory(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      <div
+        className={styles.skillsList}
+        role="tabpanel"
+        id={`panel-${activeCategory}`}
+        aria-labelledby={`tab-${activeCategory}`}
+        style={{ opacity: fade ? 0.3 : 1, transition: "opacity 0.35s ease" }}
+      >
+        {techSkills[activeCategory].map((item) => (
+          <div key={item} className={styles.skillItem}>
+            {item}
+          </div>
+        ))}
+      </div>
+
+      <div className={styles.skillsField}>
+        <p>
+          Здесь можно добавить дополнительную информацию или описание для
+          категории <b>{activeCategory}</b>.
+        </p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default TechSkills;

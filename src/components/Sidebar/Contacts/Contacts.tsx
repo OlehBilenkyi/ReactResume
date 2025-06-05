@@ -1,14 +1,7 @@
 import styles from "./Contacts.module.scss";
 
-
-
-
-
-
 const Contacts = () => (
-  
   <div className={styles.skillsContainer}>
-  
     <p className={styles.skillsListItem}>
       <span className={styles.skillsTitle}>GitHub:</span>
       <a
