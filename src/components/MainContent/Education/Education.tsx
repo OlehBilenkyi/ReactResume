@@ -10,9 +10,7 @@ const MyEducation: React.FC = () => {
         </h2>
       </div>
 
- 
-
-      <div className={styles.education__container}>
+      {/* <div className={styles.education__container}>
         <h3 className={styles.education__title}>
           Self-Taught Frontend Development
         </h3>
@@ -30,7 +28,7 @@ const MyEducation: React.FC = () => {
           </li>
         </ul>
         <p className={styles.education__period}>2022 - Present</p>
-      </div>
+      </div> */}
 
       <div className={styles.education__container}>
         <h3 className={styles.education__title}>Formal Education</h3>

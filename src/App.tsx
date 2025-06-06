@@ -7,7 +7,7 @@ function App() {
     <>
       <MySidebar />
       <NameSection name="Oleh Bilenkyi" title="Frontend Developer" />
-      <MainContent description="Motivated and self-taught Junior JavaScript Developer" />
+      <MainContent description="I'm a self-taught Front-End Developer with strong motivation to grow and contribute as part of a real team. I'm excited about the opportunity to gain professional experience as a Junior React Developer. I have already built several full-featured applications using React, REST API, Firebase, and modern UI libraries." />
     </>
   );
 }
