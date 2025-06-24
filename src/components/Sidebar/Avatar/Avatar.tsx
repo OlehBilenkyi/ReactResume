@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import styles from "./Avatar.module.scss";
 import Modal from "../../Modal/Modal";
+import FotoAvatar from "../../../../public/avatar.jpg";
 
 const Avatar: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,7 +20,7 @@ const Avatar: React.FC = () => {
           tabIndex={0}
         >
           <img
-            src="/avatar.jpg"
+            src={FotoAvatar}
             alt="User avatar"
             className={styles.photoImage}
             loading="lazy"
@@ -29,7 +30,7 @@ const Avatar: React.FC = () => {
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <img
-          src="/avatar.jpg"
+          src={FotoAvatar}
           alt="User avatar enlarged"
           className={styles.modalImage}
         />
