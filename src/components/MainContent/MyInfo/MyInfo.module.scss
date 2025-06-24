@@ -7,6 +7,8 @@ $hover-color: #0e44df;
 $background-light: rgba(255, 255, 255, 0.95);
 $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
+@use "sass:color";
+
 .experienceTitle {
   font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
   font-weight: 600;
@@ -15,7 +17,7 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background: linear-gradient(
     135deg,
     $primary-color,
-    darken($primary-color, 10%)
+    color.adjust($primary-color, $lightness: -10%)
   );
   padding: 8px 15px;
   border-radius: 6px;
@@ -26,8 +28,6 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 1.2rem;
   }
 }
-// MyInfo.module.scss
-
 
 .myInfo {
   padding: 2rem;
