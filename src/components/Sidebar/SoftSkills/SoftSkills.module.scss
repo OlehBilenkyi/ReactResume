@@ -1,60 +1,7 @@
 .softSkillsContainer {
-  margin-bottom: 40px;
-  background: rgba(255, 255, 255, 0.766);
-  border-radius: 12px;
-  padding: 24px 28px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover,
-  &:focus-within {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  }
-
-  @media (max-width: 768px) {
-    padding: 20px 22px;
-    margin-bottom: 30px;
-  }
-}
-
-.softSkillsTitle {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: clamp(1.4rem, 1.2rem + 0.5vw, 1.6rem);
-  color: #2c3e50; // тёмно-серый для читаемости
-  margin-bottom: 18px;
-  user-select: none;
-}
-
-.softSkillsContent {
-  color: #4a4a4a; // мягкий графитовый цвет
-  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.1rem);
-  line-height: 1.6;
-  padding-left: 24px;
-  border-left: 3px solid #38a169; // спокойный зелёный акцент
-  position: relative;
-
-  &::before {
-    content: "“";
-    position: absolute;
-    top: -10px;
-    left: 4px;
-    font-size: 3.5rem;
-    color: #c6f6d5; // бледно-зелёный, ненавязчивый
-    font-family: serif;
-    line-height: 1;
-    user-select: none;
-  }
-
-  @media (max-width: 768px) {
+  p {
+    color: #98c3b8;
+    line-height: 1.6;
     font-size: 1rem;
-    padding-left: 20px;
-
-    &::before {
-      font-size: 3rem;
-      top: -8px;
-      left: 2px;
-    }
   }
 }

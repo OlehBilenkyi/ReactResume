@@ -1,0 +1,57 @@
+.footer {
+  background-color: #13201d;
+  color: #98c3b8;
+  padding: 2.5rem 0;
+
+  .contactGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.25rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .columnTitle {
+      color: #ffffff;
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .socialLinks,
+    .contactInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .socialLink,
+      .contactItem {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #98c3b8;
+        transition: color 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .footerBottom {
+    margin-top: 3rem;
+    border-top: 1px solid #27423c;
+    padding-top: 1.5rem;
+    text-align: center;
+
+    .copyright,
+    .note {
+      margin: 0;
+      color: #98c3b8;
+    }
+  }
+}

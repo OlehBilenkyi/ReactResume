@@ -1,7 +1,4 @@
-// TechSkills.tsx (React + TypeScript)
-
-import { useState, useEffect } from "react";
-import styles from "./TechSkills.module.scss";
+import React, { useState, useEffect } from "react";
 
 const techSkills: Record<string, string[]> = {
   Languages: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript (basic)"],
@@ -12,64 +9,48 @@ const techSkills: Record<string, string[]> = {
 };
 
 const TechSkills: React.FC = () => {
-  const categories = Object.keys(techSkills);
-  const [activeCategory, setActiveCategory] = useState<string>(categories[0]);
-  const [fade, setFade] = useState<boolean>(false);
+  const cats = Object.keys(techSkills);
+  const [active, setActive] = useState(cats[0]);
+  const [fade, setFade] = useState(false);
 
-  // Анимация затухания при смене таба
   useEffect(() => {
     setFade(true);
-    const timer = setTimeout(() => setFade(false), 350);
-    return () => clearTimeout(timer);
-  }, [activeCategory]);
+    const t = setTimeout(() => setFade(false), 300);
+    return () => clearTimeout(t);
+  }, [active]);
 
   return (
-    <div className={styles.techSkillsContainer}>
-      <div
-        className={styles.tabs}
-        role="tablist"
-        aria-label="Tech skills categories"
-      >
-        {categories.map((category) => (
+    <div>
+      <div className="flex space-x-2 mb-4">
+        {cats.map((cat) => (
           <button
-            key={category}
-            type="button"
-            role="tab"
-            aria-selected={activeCategory === category}
-            aria-controls={`panel-${category}`}
-            id={`tab-${category}`}
-            className={`${styles.tabButton} ${
-              activeCategory === category ? styles.active : ""
+            key={cat}
+            onClick={() => setActive(cat)}
+            className={`px-3 py-1 rounded-full font-medium ${
+              active === cat
+                ? "bg-accent text-primaryBg"
+                : "bg-[#1c302b] text-secondaryText"
             }`}
-            onClick={() => setActiveCategory(category)}
           >
-            {category}
+            {cat}
           </button>
         ))}
       </div>
-
       <div
-        className={styles.skillsList}
-        role="tabpanel"
-        id={`panel-${activeCategory}`}
-        aria-labelledby={`tab-${activeCategory}`}
-        style={{ opacity: fade ? 0.3 : 1, transition: "opacity 0.35s ease" }}
+        className={`grid grid-cols-2 gap-2 transition-opacity ${
+          fade ? "opacity-30" : "opacity-100"
+        }`}
       >
-        {techSkills[activeCategory].map((item) => (
-          <div key={item} className={styles.skillItem}>
+        {techSkills[active].map((item) => (
+          <div
+            key={item}
+            className="px-4 py-2 bg-[#1c302b] rounded-lg text-secondaryText text-sm"
+          >
             {item}
           </div>
         ))}
       </div>
-
-      <div className={styles.skillsField}>
-        <p>
-          Здесь можно добавить дополнительную информацию или описание для
-          категории <b>{activeCategory}</b>.
-        </p>
-      </div>
     </div>
   );
 };
-
 export default TechSkills;

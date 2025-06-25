@@ -1,126 +1,32 @@
 .languagesContainer {
-  margin-bottom: 40px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
-  border-radius: 16px;
-  padding: 30px 25px;
-  box-shadow: 0 10px 40px rgba(31, 38, 135, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: box-shadow 0.3s ease;
+  .languageItem {
+    margin-bottom: 1rem;
 
-  &:hover {
-    box-shadow: 0 15px 50px rgba(31, 38, 135, 0.35);
+    .languageHeader {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.25rem;
+
+      .languageName {
+        color: #ffffff;
+      }
+      .languageLevel {
+        color: #98c3b8;
+      }
+    }
+
+    .proficiencyBar {
+      background-color: #1c302b;
+      border-radius: 12px;
+      height: 0.5rem;
+      overflow: hidden;
+
+      .proficiencyFill {
+        height: 100%;
+        background: linear-gradient(90deg, #2cd2a9, #1c9c7c);
+        width: 0;
+        transition: width 1s ease-in-out;
+      }
+    }
   }
-
-  @media (max-width: 768px) {
-    padding: 20px 15px;
-    margin-bottom: 30px;
-  }
-}
-
-.languagesTitle {
-  font-size: clamp(1.4rem, 1rem + 1vw, 1.8rem);
-  font-weight: 700;
-  margin-bottom: 25px;
-  color: #fff;
-  background: linear-gradient(135deg, #066, #0a8c8c);
-  padding: 12px 25px;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  display: inline-block;
-}
-
-.languagesList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  counter-reset: language-counter;
-}
-
-.languageItem {
-  position: relative;
-  margin-bottom: 20px;
-  padding-left: 38px;
-  color: white;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  cursor: default;
-  border-radius: 12px;
-  padding: 15px 20px 20px 38px;
-  background: rgba(10, 140, 140, 0.1);
-  box-shadow: inset 0 0 8px rgba(92, 227, 227, 0.4);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-
-  &::before {
-    counter-increment: language-counter;
-    content: counter(language-counter);
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #5ce3e3;
-    color: #066;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    font-weight: 700;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 6px #5ce3e3;
-  }
-
-  &:hover,
-  &:focus {
-    background: rgba(92, 227, 227, 0.25);
-    box-shadow: inset 0 0 12px rgba(92, 227, 227, 0.7);
-    outline: none;
-  }
-}
-
-.languageHeader {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.languageName {
-  font-size: 1.15rem;
-}
-
-.languageLevel {
-  font-size: 1rem;
-  font-style: italic;
-  color: #a0eaea;
-}
-
-.proficiencyBar {
-  width: 100%;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.proficiencyFill {
-  height: 100%;
-  background: linear-gradient(90deg, #5ce3e3, #0a8c8c);
-  border-radius: 5px;
-  width: 0%;
-  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Скрытый текст для screen reader */
-.srOnly {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  border: 0 !important;
 }

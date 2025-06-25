@@ -1,93 +1,52 @@
-// NameSection.tsx
 import React, { useState, useEffect } from "react";
-import styles from "./NameSection.module.scss";
 
-interface NameSectionProps {
+const NameSection: React.FC<{
   name: string;
   title?: string;
-  socialLinks?: {
-    icon: React.ReactNode;
-    url: string;
-  }[];
-}
-
-const NameSection: React.FC<NameSectionProps> = ({
-  name,
-  title,
-  socialLinks,
-}) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-
+  socialLinks?: any[];
+}> = ({ name, title, socialLinks }) => {
+  const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", () => setScrolled(window.scrollY > 50));
   }, []);
-
   return (
     <section
-      className={`${styles.nameSection} ${
-        isScrolled ? styles.scrolled : styles.initial
-      }`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className={`container mx-auto my-10 p-4 md:p-10 rounded-xl relative flex flex-col justify-end min-h-[480px]
+                  bg-cover bg-center transition-shadow ${
+                    scrolled ? "shadow-2xl" : "shadow-lg"
+                  }`}
+      style={{
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)),url(https://…)`,
+      }}
     >
-      <div className={styles.contentWrapper}>
-        <div className={styles.textContainer}>
-          <h1 className={styles.name}>
-            {name.split("").map((letter, index) => (
-              <span
-                key={index}
-                className={styles.letter}
-                style={{
-                  animationDelay: `${index * 0.05}s`,
-                  display: "inline-block",
-                  minWidth: letter === " " ? "0.6em" : undefined, // фиксированный визуальный пробел
-                  opacity: letter === " " ? 0 : 1, // скрыть анимацию для пробела
-                }}
-              >
-                {letter === " " ? "\u00A0" : letter}
-              </span>
-            ))}
-          </h1>
-
-          {title && (
-            <h2 className={styles.title}>
-              <span className={styles.titleText}>{title}</span>
-            </h2>
-          )}
+      <h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">
+        {name}
+      </h1>
+      {title && (
+        <h2 className="text-white text-base md:text-lg font-normal opacity-90 mt-2 animate-bounce">
+          {title}
+        </h2>
+      )}
+      <button className="mt-6 bg-accent text-primaryBg px-6 py-2 rounded-full font-bold hover:opacity-90 transition">
+        Explore CV
+      </button>
+      {socialLinks && (
+        <div className="absolute bottom-6 right-6 flex space-x-4">
+          {socialLinks.map((link, i) => (
+            <a
+              key={i}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-[#1c302b] rounded-full hover:bg-accent transition"
+              style={{ animationDelay: `${i * 0.2}s` }}
+            >
+              {link.icon}
+            </a>
+          ))}
         </div>
-
-        {socialLinks && (
-          <div className={styles.socialLinks}>
-            {socialLinks.map((link, index) => (
-              <a
-                href={link.url}
-                key={index}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialLink}
-                style={{
-                  animationDelay: `${index * 0.3}s`,
-                }}
-              >
-                {link.icon}
-              </a>
-            ))}
-          </div>
-        )}
-      </div>
-
-      <div
-        className={`${styles.backgroundEffect} ${
-          isHovered ? styles.active : ""
-        }`}
-      />
+      )}
     </section>
   );
 };
-
 export default NameSection;

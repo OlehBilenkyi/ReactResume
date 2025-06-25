@@ -1,54 +1,24 @@
 import React from "react";
-import styles from "./Education.module.scss";
 
-const MyEducation: React.FC = () => {
-  return (
-    <div className={styles.education}>
-      <div className={styles["education-header"]}>
-        <h2 className={styles["education-header__title"]}>
-          ОБРАЗОВАНИЕ И ПРАКТИКА
-        </h2>
-      </div>
-
-      {/* <div className={styles.education__container}>
-        <h3 className={styles.education__title}>
-          Self-Taught Frontend Development
-        </h3>
-        <p className={styles.education__institution}>
-          Resources: YouTube (GO-IT, Net Ninja), JavaScript.info, freeCodeCamp,
-          ChatGPT.
-        </p>
-
-        <ul className={styles.education__list}>
-          <li className={styles.education__listItem}>
-            Focused on HTML, CSS, JavaScript (ES6+), React fundamentals
-          </li>
-          <li className={styles.education__listItem}>
-            Completed projects in both frontend development
-          </li>
-        </ul>
-        <p className={styles.education__period}>2022 - Present</p>
-      </div> */}
-
-      <div className={styles.education__container}>
-        <h3 className={styles.education__title}>Formal Education</h3>
-        <h4 className={styles.education__institution}>
-          <a
-            href="https://nuos.edu.ua/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Admiral Makarov National University of Shipbuilding, Mykolaiv,
-            Ukraine
-          </a>
-        </h4>
-        <p className={styles.education__resources}>
-          Master's Degree (with Honors), Electrical Engineering
-        </p>
-        <p className={styles.education__period}>September 2010 – June 2018</p>
-      </div>
+const MyEducation: React.FC = () => (
+  <section className="section bg-primaryBg text-white py-12">
+    <h2 className="section-title text-2xl font-bold mb-6">Education</h2>
+    <div className="bg-[#1c302b] rounded-xl p-6 max-w-2xl mx-auto">
+      <h3 className="text-xl font-semibold mb-2">
+        <a
+          href="https://nuos.edu.ua/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline"
+        >
+          Admiral Makarov National University of Shipbuilding, Mykolaiv, Ukraine
+        </a>
+      </h3>
+      <p className="text-secondaryText mb-1">
+        Master's Degree (with Honors), Electrical Engineering
+      </p>
+      <p className="text-secondaryText">September 2010 – June 2018</p>
     </div>
-  );
-};
-
+  </section>
+);
 export default MyEducation;

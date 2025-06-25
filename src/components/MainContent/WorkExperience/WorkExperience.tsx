@@ -1,54 +1,29 @@
-import styles from "./WorkExperience.module.scss";
+import React from "react";
 
 const Experience = () => (
-  <>
-    <h2 className={styles.experienceTitle}>Work Experience</h2>
-    <div className={styles.experienceContainer}>
-      <div className={styles.experienceItem}>
-        <div className={styles.timeline}>
-          <span className={styles.timelineDot} />
-          <span className={styles.timelineLine} />
+  <section className="section bg-primaryBg text-white py-12">
+    <h2 className="section-title text-2xl font-bold mb-6">Work Experience</h2>
+    <div className="container mx-auto space-y-8 px-5">
+      {/* Пример одной записи */}
+      <div className="flex items-start space-x-4">
+        <div className="flex flex-col items-center">
+          <div className="w-4 h-4 bg-accent rounded-full"></div>
+          <div className="w-px bg-[#396056] flex-1"></div>
         </div>
-        <div className={styles.experienceContent}>
-          <p className={styles.dates}>February 2023 - Present</p>
-          <h3 className={styles.company}>Remote</h3>
-          <h4 className={styles.jobTitle}>
+        <div>
+          <p className="text-secondaryText text-sm mb-1">
+            February 2023 – Present
+          </p>
+          <h3 className="text-white text-lg font-semibold">
             Junior JavaScript Developer (Internship)
-          </h4>
-          <ul className={styles.detailsList}>
-            <li className={styles.listItem}>
-              Developed and maintained web applications including landing pages,
-              small e-commerce platforms, and mobile apps
-            </li>
-            <li className={styles.listItem}>
-              Integrated payment systems (Stripe API) and worked with various
-              APIs (Google OAuth, Telegram)
-            </li>
-            <li className={styles.listItem}>
-              Optimized performance of web services and managed server
-              configurations
-            </li>
-            <li className={styles.listItem}>
-              Created responsive web components and interactive user interfaces
-              using modern JavaScript
-            </li>
-            <li className={styles.listItem}>
-              Implemented security measures including CSRF protection and Google
-              reCAPTCHA
-            </li>
-            <li className={styles.listItem}>
-              Managed tasks using Trello and followed technical specifications
-              (ToR)
-            </li>
-            <li className={styles.listItem}>
-              Used Git for version control and Composer for PHP dependency
-              management
-            </li>
+          </h3>
+          <ul className="list-disc list-inside space-y-1 mt-2 text-secondaryText text-sm">
+            <li>Developed and maintained web applications…</li>
+            {/* и т.д. */}
           </ul>
         </div>
       </div>
     </div>
-  </>
+  </section>
 );
-
 export default Experience;
