@@ -1,30 +1,4 @@
-// App.module.scss
-
-.appContainer {
-  font-family: "Space Grotesk", "Noto Sans", sans-serif;
-  background-color: #10231d;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
-  color: white;
-}
-
-.contentContainer {
-  padding: 0 10rem;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.layoutContentContainer {
-  max-width: 60rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
+// Header.module.scss
 
 .header {
   display: flex;
