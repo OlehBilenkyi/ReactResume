@@ -1,10 +1,10 @@
+import React from "react";
 import { useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as random from "maath/random";
 
-export const ParticlesBackground = () => {
+export const ParticlesBackground: React.FC = () => {
   const particles = React.useRef<THREE.Points>(null);
-
   useFrame((state, delta) => {
     if (particles.current) {
       particles.current.rotation.x += delta * 0.1;

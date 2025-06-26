@@ -1,8 +1,8 @@
 import React from "react";
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
   return (
-    <>
+    <section id="about">
       <h2 className="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
         About Me
       </h2>
@@ -13,7 +13,7 @@ const AboutMe = () => {
         deep understanding of modern web technologies to deliver exceptional
         digital products.
       </p>
-    </>
+    </section>
   );
 };
 

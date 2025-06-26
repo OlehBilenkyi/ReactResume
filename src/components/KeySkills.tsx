@@ -1,48 +1,28 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { containerVariants, itemVariants } from "./motionConfig";
 
-const KeySkills = () => {
-  const skills = [
-    { name: "React", level: 90 },
-    { name: "Vue.js", level: 80 },
-    { name: "JavaScript", level: 95 },
-    { name: "HTML", level: 90 },
-    { name: "CSS", level: 85 },
-    { name: "TypeScript", level: 75 },
-    { name: "Next.js", level: 80 },
-  ];
+const skills = [
+  { name: "React", level: 90 },
+  { name: "Vue.js", level: 80 },
+  { name: "JavaScript", level: 95 },
+  { name: "HTML", level: 90 },
+  { name: "CSS", level: 85 },
+  { name: "TypeScript", level: 75 },
+  { name: "Next.js", level: 80 },
+];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
+const KeySkills: React.FC = () => {
   return (
-    <>
+    <section id="skills" className="px-4 py-6">
       <motion.h2
-        className="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+        className="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5"
         variants={itemVariants}
       >
         Key Skills
       </motion.h2>
       <motion.div
-        className="flex flex-wrap gap-4 px-4 py-6"
+        className="flex flex-wrap gap-4"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -54,7 +34,7 @@ const KeySkills = () => {
           <p className="text-white text-base font-medium leading-normal">
             Frontend Development Skills
           </p>
-          <p className="text-white tracking-light text-[32px] font-bold leading-tight truncate">
+          <p className="text-white text-[32px] font-bold leading-tight truncate">
             90%
           </p>
           <div className="flex gap-1">
@@ -74,7 +54,7 @@ const KeySkills = () => {
                   initial={{ height: 0 }}
                   animate={{ height: `${skill.level}%` }}
                   transition={{ duration: 1, delay: index * 0.1 }}
-                ></motion.div>
+                />
                 <p className="text-[#8eccb9] text-[13px] font-bold leading-normal tracking-[0.015em]">
                   {skill.name}
                 </p>
@@ -82,8 +62,24 @@ const KeySkills = () => {
             ))}
           </div>
         </motion.div>
+        {skills.map((skill, idx) => (
+          <motion.div
+            key={idx}
+            className="flex flex-col items-center"
+            variants={itemVariants}
+          >
+            <p className="text-white text-sm">{skill.name}</p>
+            <div className="w-10 h-32 bg-[#2f6a57] rounded-full overflow-hidden">
+              <div
+                className="w-full bg-[#00F0FF]"
+                style={{ height: `${skill.level}%` }}
+              />
+            </div>
+            <p className="text-[#8eccb9] text-xs">{skill.level}%</p>
+          </motion.div>
+        ))}
       </motion.div>
-    </>
+    </section>
   );
 };
 
