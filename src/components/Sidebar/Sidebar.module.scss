@@ -1,0 +1,133 @@
+.sidebar {
+  --sidebar-bg: teal;
+  --section-title-bg: hsla(0, 0%, 100%, 0.15);
+  --text-color: #fff;
+  --highlight-color: #5ce3e3;
+
+  position: relative;
+  background-color: var(--sidebar-bg);
+  margin-left: 50px;
+  color: var(--text-color);
+  padding: 77px 30px 25px 30px;
+  // width: 90%;
+  box-sizing: border-box;
+  z-index: 2;
+
+  &__photo {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__section {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 992px) {
+    width: 300px;
+    margin-left: 30px;
+    padding: 60px 20px 20px 20px;
+    margin-top: 150px;
+
+    &__photo {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    padding: 30px 15px;
+    margin-top: 0;
+
+    &__photo {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.sectionTitle {
+  background-color: var(--section-title-bg);
+  color: var(--text-color);
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
+  font-weight: 600;
+  border-radius: 3px;
+
+  @media (max-width: 992px) {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+}
+
+.contactsItem {
+  margin-bottom: 15px;
+
+  @media (max-width: 992px) {
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+}
+
+.contactsLabel {
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-bottom: 3px;
+  opacity: 0.8;
+}
+
+.contactsLink {
+  font-size: 1em;
+  line-height: 1.3;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--highlight-color);
+  }
+}
+
+.skillsList {
+  padding-left: 20px;
+
+  &--no-bullets {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 15px;
+
+    &--no-bullets {
+      padding-left: 0;
+    }
+  }
+}
+
+.skillsListItem {
+  margin-bottom: 8px;
+  line-height: 1.4;
+
+  strong {
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 5px;
+    line-height: 1.3;
+  }
+}

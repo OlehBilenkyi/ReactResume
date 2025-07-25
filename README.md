@@ -1,12 +1,54 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ReactResume/
+├── .gitattributes
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── public/
+│ └── avatar.jpg
+├── README.md
+├── src/
+│ ├── App.module.scss
+│ ├── App.tsx
+│ ├── components/
+│ │ ├── MainContent/
+│ │ │ ├── Education/
+│ │ │ │ ├── Education.module.scss
+│ │ │ │ └── Education.tsx
+│ │ │ ├── MainContent.module.scss
+│ │ │ ├── MainContent.tsx
+│ │ │ ├── MyInfo/
+│ │ │ │ ├── MyInfo.module.scss
+│ │ │ │ └── MyInfo.tsx
+│ │ │ ├── MyProjects/
+│ │ │ │ ├── MyProjects.module.scss
+│ │ │ │ └── MyProjects.tsx
+│ │ │ ├── NameSection/
+│ │ │ │ ├── NameSection.module.scss
+│ │ │ │ └── NameSection.tsx
+│ │ │ └── WorkExperience/
+│ │ │ ├── WorkExperience.module.scss
+│ │ │ └── WorkExperience.tsx
+│ │ └── Sidebar/
+│ │ ├── Avatar/
+│ │ │ ├── Avatar.module.scss
+│ │ │ └── Avatar.tsx
+│ │ ├── Contacts/
+│ │ │ ├── Contacts.module.scss
+│ │ │ └── Contacts.tsx
+│ │ ├── Languages/
+│ │ │ ├── Languages.module.scss
+│ │ │ └── Languages.tsx
+│ │ ├── Sidebar.module.scss
+│ │ ├── Sidebar.tsx
+│ │ ├── SoftSkills/
+│ │ │ ├── SoftSkills.module.scss
+│ │ │ └── SoftSkills.tsx
+│ │ └── TechSkills/
+│ │ ├── TechSkills.module.scss
+│ │ └── TechSkills.tsx
+│ ├── index.css
+│ └── main.tsx
+├── tsconfig.json
+└── vite.config.js

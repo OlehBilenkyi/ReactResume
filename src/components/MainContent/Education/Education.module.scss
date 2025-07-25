@@ -1,0 +1,336 @@
+@use "sass:color";
+
+// Общие переменные
+$primary-color: #066;
+$secondary-color: #5ce3e3;
+$text-color: #333;
+$muted-text: #666;
+$hover-color: #0e44df;
+$background-light: rgba(255, 255, 255, 0.95);
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+.education-header__title {
+  font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    $primary-color,
+    color.adjust($primary-color, $lightness: -10%)
+  );
+  padding: 8px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+@mixin section-container {
+  margin-bottom: 2rem;
+  background: $background-light;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: $box-shadow;
+  transition: $transition;
+  border-left: 4px solid $primary-color;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@mixin section-title {
+  font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    $primary-color,
+    color.adjust($primary-color, $lightness: -10%)
+  );
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@mixin list-item {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.2rem;
+
+  &::before {
+    content: "▹";
+    color: $primary-color;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+}
+
+// Общий заголовок секции
+.section-header {
+  position: relative;
+  margin-bottom: 2.5rem;
+  text-align: center;
+
+  &__title {
+    @include section-title;
+    position: relative;
+    display: inline-block;
+    padding: 0.7rem 2rem;
+    font-size: clamp(1.2rem, 1rem + 0.8vw, 1.6rem);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        color.adjust($primary-color, $lightness: -10%),
+        $primary-color
+      );
+    }
+
+    &::before {
+      left: -60px;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+
+    &::after {
+      right: -60px;
+      clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: calc((100% - 300px) / 2);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $primary-color);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(90deg, $primary-color, transparent);
+  }
+
+  &::before {
+    left: 0;
+  }
+}
+
+/* Стили для Education */
+.education {
+  &__container {
+    @include section-container;
+  }
+
+  &__title {
+    @include section-title;
+    margin-bottom: 1.2rem;
+  }
+
+  &__institution {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: $primary-color;
+    transition: all 0.2s ease;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px dashed transparent;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: $hover-color;
+        border-bottom-color: $hover-color;
+      }
+    }
+  }
+
+  &__degree,
+  &__resources {
+    font-size: 1rem;
+    color: $text-color;
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* Стили для Projects */
+.projects {
+  &__container {
+    @include section-container;
+  }
+
+  &__title {
+    @include section-title;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.4em;
+      height: 0.8em;
+      width: 0.8em;
+      background-color: $secondary-color;
+      border-radius: 50%;
+    }
+  }
+
+  &__item-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: $primary-color;
+  }
+
+  &__item-time {
+    @extend .education__period;
+    margin-bottom: 0.8rem;
+  }
+
+  &__list {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    list-style: none;
+  }
+
+  &__list-item {
+    @include list-item;
+  }
+}
+
+/* Адаптивные стили */
+@media (max-width: 992px) {
+  .section-header {
+    &__title {
+      padding: 0.7rem 1.5rem;
+
+      &::before,
+      &::after {
+        width: 30px;
+      }
+
+      &::before {
+        left: -30px;
+      }
+
+      &::after {
+        right: -30px;
+      }
+    }
+
+    &::before,
+    &::after {
+      width: calc((100% - 250px) / 2);
+    }
+  }
+
+  .education__container,
+  .projects__container {
+    padding: 1.2rem;
+  }
+
+  .education__title,
+  .projects__title {
+    font-size: 1.15rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .education__institution,
+  .projects__item-title {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 2rem;
+
+    &__title {
+      padding: 0.6rem 1.2rem;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .education__container,
+  .projects__container {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .education__list,
+  .projects__list {
+    padding-left: 0.8rem;
+  }
+
+  .education__list-item,
+  .projects__list-item {
+    padding-left: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education__container,
+  .projects__container {
+    padding: 0.9rem;
+    border-left-width: 3px;
+  }
+
+  .education__title,
+  .projects__title {
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+  }
+
+  .education__degree,
+  .education__resources,
+  .projects__item-title {
+    font-size: 0.95rem;
+  }
+
+  .education__period,
+  .projects__item-time {
+    font-size: 0.85rem;
+  }
+
+  .education__list-item,
+  .projects__list-item {
+    margin-bottom: 0.6rem;
+  }
+}
