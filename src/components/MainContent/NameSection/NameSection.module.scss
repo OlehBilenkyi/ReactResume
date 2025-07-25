@@ -41,6 +41,7 @@
     text-align: center;
     top: 20px;
     left: calc(50% + 170px);
+    transition: top 0.8s ease, left 0.8s ease, transform 0.8s ease; /* Плавные переходы для top, left и transform */
   }
 
   .name {
@@ -111,7 +112,7 @@
     padding: 1rem 3rem;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(20px);
-    z-index: 9999; // максимальный z-index для гарантии нахождения поверх всех элементов
+    z-index: 9999;
 
     .name {
       font-size: clamp(1.5rem, 2vw, 2rem);
@@ -119,6 +120,12 @@
 
     .title {
       font-size: clamp(0.8rem, 1vw, 1rem);
+    }
+
+    .contentWrapper {
+      top: 50%; /* Центрируем по вертикали */
+      left: 50%; /* Центрируем по горизонтали */
+      transform: translate(-50%, -50%); /* Смещаем по обеим осям */
     }
   }
 
