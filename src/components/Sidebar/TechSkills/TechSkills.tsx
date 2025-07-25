@@ -14,7 +14,6 @@ const TechSkills: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>(categories[0]);
   const [fade, setFade] = useState<boolean>(false);
 
-  // Анимация затухания при смене таба
   useEffect(() => {
     setFade(true);
     const timer = setTimeout(() => setFade(false), 350);
@@ -59,12 +58,12 @@ const TechSkills: React.FC = () => {
         ))}
       </div>
 
-      <div className={styles.skillsField}>
+      {/* <div className={styles.skillsField}>
         <p>
           Здесь можно добавить дополнительную информацию или описание для
           категории <b>{activeCategory}</b>.
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
