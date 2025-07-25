@@ -1,3 +1,4 @@
+// NameSection.tsx
 import React, { useState, useEffect } from "react";
 import styles from "./NameSection.module.scss";
 
@@ -16,6 +17,7 @@ const NameSection: React.FC<NameSectionProps> = ({
   socialLinks,
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +29,11 @@ const NameSection: React.FC<NameSectionProps> = ({
 
   return (
     <section
-      className={`${styles.nameSection} ${isScrolled ? styles.scrolled : ""}`}
+      className={`${styles.nameSection} ${
+        isScrolled ? styles.scrolled : styles.initial
+      }`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className={styles.contentWrapper}>
         <div className={styles.textContainer}>
@@ -39,8 +45,8 @@ const NameSection: React.FC<NameSectionProps> = ({
                 style={{
                   animationDelay: `${index * 0.05}s`,
                   display: "inline-block",
-                  minWidth: letter === " " ? "0.6em" : undefined,
-                  opacity: letter === " " ? 0 : 1,
+                  minWidth: letter === " " ? "0.6em" : undefined, // фиксированный визуальный пробел
+                  opacity: letter === " " ? 0 : 1, // скрыть анимацию для пробела
                 }}
               >
                 {letter === " " ? "\u00A0" : letter}
@@ -74,6 +80,12 @@ const NameSection: React.FC<NameSectionProps> = ({
           </div>
         )}
       </div>
+
+      <div
+        className={`${styles.backgroundEffect} ${
+          isHovered ? styles.active : ""
+        }`}
+      />
     </section>
   );
 };

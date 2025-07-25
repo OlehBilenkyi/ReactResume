@@ -1,5 +1,3 @@
-// TechSkills.tsx (React + TypeScript)
-
 import { useState, useEffect } from "react";
 import styles from "./TechSkills.module.scss";
 
@@ -49,11 +47,10 @@ const TechSkills: React.FC = () => {
       </div>
 
       <div
-        className={styles.skillsList}
+        className={`${styles.skillsList} ${fade ? styles.fade : ""}`}
         role="tabpanel"
         id={`panel-${activeCategory}`}
         aria-labelledby={`tab-${activeCategory}`}
-        style={{ opacity: fade ? 0.3 : 1, transition: "opacity 0.35s ease" }}
       >
         {techSkills[activeCategory].map((item) => (
           <div key={item} className={styles.skillItem}>
