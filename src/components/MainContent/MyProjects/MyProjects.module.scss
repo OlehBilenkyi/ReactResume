@@ -1,4 +1,5 @@
 // Переменные (можно вынести в отдельный файл)
+@use "sass:color";
 $primary-color: #066;
 $secondary-color: #5ce3e3;
 $text-color: #333;
@@ -40,7 +41,7 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background: linear-gradient(
     135deg,
     $primary-color,
-    darken($primary-color, 10%)
+    color.adjust($primary-color, $lightness: -10%)
   );
   padding: 8px 15px;
   border-radius: 6px;
