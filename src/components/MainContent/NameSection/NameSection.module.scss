@@ -109,17 +109,28 @@
   }
 
   &.scrolled {
-    padding: 1rem 3rem;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(20px);
-    z-index: 9999; /* Устанавливаем максимальный z-index для секции, когда она прилипает */
+    height: 102px;
+    padding: 0.3rem 1.5rem;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(15px);
+    z-index: 9999;
+    transition: all 0.5s ease;
 
     .name {
-      font-size: clamp(1.5rem, 2vw, 2rem);
+      font-size: clamp(1rem, 1.6vw, 2rem);
     }
 
     .title {
-      font-size: clamp(0.8rem, 1vw, 1rem);
+      font-size: clamp(0.8rem, 1vw, 1.2rem);
+      padding: 0.2rem 1rem;
+    }
+
+    .socialLinks {
+      gap: 1rem;
+    }
+
+    .socialLink {
+      font-size: 1.2rem;
     }
   }
 
